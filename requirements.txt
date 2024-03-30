@@ -1,0 +1,6 @@
+fastapi==0.68.0
+uvicorn==0.15.0
+pandas==1.3.3
+numpy==1.21.3  # Update NumPy to the latest version compatible with Python 3.11
+matplotlib==3.4.3
+
