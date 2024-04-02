@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&display=swap');
+
+@media screen and (max-width: 768px) {
+    /* Styles for smaller screens */
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+button { 
+    font-family: "Lobster Two", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Lobster Two";
+    padding: 30px 10%;
+    color: white;
+    line-height: 0.8;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    margin-bottom: 5%;
+    background-color: rgb(117, 212, 227);
+  }
+p {
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    color: black;
+    font-size: 25px;
+    font-family: sans-serif;
+    line-height: 1.5;
+}
+h1 {
+    color: black;
+	font-size: 30px;
+	font-family: Arial;
+	line-height: 1.5;
+	align-items: center; 
+    }
+h2 {
+    color: black;
+	font-size: 15px;
+	font-family: Arial;
+	line-height: 1.5;
+	align-items: center; 
+    }
+h3 {
+    color: black;
+    font-size: 50px;
+    font-family: "Lobster Two";
+    line-height: 1.5;
+    align-items: center; 
+    }
+h4 {
+    color: black;
+    font-size: 20px;
+    font-family: Arial;
+    line-height: 1.5;
+    align-items: center; 
+    }
+h5 {
+    text-align: center;
+    color: black;
+    font-size: 40px;
+    font-family: "Lobster Two";
+    line-height:  .15;
+    }
+h6 {
+    color: black;
+    font-size: 25px;
+    font-family: Arial;
+    line-height: 1.5;
+    align-items: center; 
+    }
+
+h7 {
+    padding-left: 5%;
+    color: black;
+    font-size: 25px;
+    font-family: sans-serif;
+    line-height: 1.5;
+    align-items: center; 
+    }
+
+nav {
+    color: black;
+	font-size: 20px;
+	font-family: Arial;
+	line-height: 1.5;
+	align-items: center; 
+}
+
+h8 {
+    color: black;
+    font-size: 50px;
+    font-family: "Lobster Two";
+    line-height: 1.5;
+    text-align: center; 
+}
+
+.flex-parent {
+    display: flex;
+  }
+  
+  .jc-center {
+    justify-content: center;
+  }
+
