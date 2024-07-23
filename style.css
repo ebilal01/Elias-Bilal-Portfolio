@@ -2,15 +2,12 @@
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .nav_links {
+        flex-direction: column; /* Stack navigation items vertically on smaller screens */
     }
 
-    nav ul li {
-        display: block;
-        margin: 10px 0;
+    .nav_links li {
+        margin: 10px 0; /* Adjust spacing between stacked navigation items */
     }
 }
 
@@ -110,11 +107,30 @@ h7 {
     }
 
 nav {
+    font-size: 20px;
+    font-family: Arial;
+    line-height: 1.5;
+}
+
+.nav_links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center the navigation links horizontally */
+}
+
+.nav_links li {
+    margin: 0 10px;
+}
+
+.nav_links li a {
     color: black;
-	font-size: 20px;
-	font-family: Arial;
-	line-height: 1.5;
-	align-items: center; 
+    text-decoration: none;
+}
+
+.nav_links li a:hover {
+    text-decoration: underline;
 }
 
 h8 {
