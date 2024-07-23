@@ -178,13 +178,19 @@ button {
 
 .content {
     display: flex;
-    align-items: center; /* Center items vertically */
+    flex-wrap: wrap; /* Allow content to wrap to next line if necessary */
+    align-items: flex-start; /* Align items to the top */
     padding: 20px; /* Adjust padding as needed */
+}
+
+.image-container {
+    flex: 0 0 400px; /* Fixed width for the image container */
+    margin-right: 20px; /* Margin between image and text */
 }
 
 .text-content {
     flex: 1; /* Take up remaining space */
-    max-width: 600px; /* Adjust max-width as needed */
+    max-width: calc(100% - 420px); /* Adjust based on image width and margin */
 }
 .flex-parent {
     display: flex;
