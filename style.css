@@ -178,14 +178,13 @@ button {
 
 .content {
     display: flex;
-    flex-direction: column; /* Stack items vertically on mobile */
-    align-items: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
     padding: 20px; /* Adjust padding as needed */
 }
 
 .text-content {
+    flex: 1; /* Take up remaining space */
     max-width: 600px; /* Adjust max-width as needed */
-    text-align: justify; /* Justify text for better readability */
 }
 .flex-parent {
     display: flex;
