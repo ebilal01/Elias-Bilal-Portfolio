@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&display=swap');
+/* Importing Google Fonts */
 
+/* Global styles */
+body {
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: Arial, sans-serif; /* Default font stack */
+}
 /* Media query for smaller screens */
 @media (max-width: 768px) {
     .nav_links {
@@ -10,7 +17,71 @@
         margin: 10px 0; /* Adjust spacing between stacked navigation items */
     }
 }
+/* Global styles */
 
+/* Adjustments for smaller screens (e.g., phones) */
+/* Media query for smaller screens (e.g., phones) */
+@media (max-width: 768px) {
+    /* Flexbox adjustments for navigation */
+    .nav_links {
+        flex-direction: column; /* Stack navigation items vertically on smaller screens */
+    }
+    .nav_links li {
+        margin: 10px 0; /* Adjust spacing between stacked navigation items */
+    }
+
+    /* Flexbox adjustments for content layout */
+    .content {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+    .image-container {
+        width: 100%; /* Full width for the image container */
+        margin-bottom: 20px; /* Margin between image and text on smaller screens */
+    }
+    .text-content {
+        width: 100%; /* Full width for text content */
+        padding: 0 10px; /* Add padding for better spacing */
+    }
+    .text-content h5 {
+        font-size: 28px; /* Adjust font size for better readability */
+        text-align: center; /* Center align the welcome text */
+        font-family: "Lobster Two", sans-serif; /* Apply Lobster Two font */
+    }
+    .text-content p {
+        font-size: 16px; /* Adjust font size for better readability */
+        line-height: 1.5;
+        text-align: justify; /* Justify text for better appearance */
+        font-family: Arial, sans-serif; /* Use default font stack */
+    }
+}
+
+/* Styles for larger screens (e.g., laptops) */
+@media (min-width: 769px) {
+    /* Flexbox adjustments for content layout */
+    .content {
+        flex-direction: row; /* Display items side by side on larger screens */
+        align-items: flex-start; /* Align items to the top */
+    }
+    .image-container {
+        flex: 0 0 400px; /* Fixed width for the image container */
+        margin-right: 20px; /* Margin between image and text on larger screens */
+    }
+    .text-content {
+        flex: 1; /* Take up remaining space */
+        max-width: calc(100% - 420px); /* Adjust based on image width and margin */
+    }
+    .text-content h5 {
+        font-size: 40px; /* Larger font size for welcome text on larger screens */
+        text-align: left; /* Left align the welcome text */
+        font-family: "Lobster Two", sans-serif; /* Apply Lobster Two font */
+    }
+    .text-content p {
+        font-size: 20px; /* Adjust font size for paragraph on larger screens */
+        line-height: 1.5;
+        text-align: justify; /* Justify text for better appearance */
+        font-family: Arial, sans-serif; /* Use default font stack */
+    }
+}
 img {
     max-width: 100%;
     height: auto;
@@ -112,6 +183,7 @@ nav {
     line-height: 1.5;
 }
 
+
 .nav_links {
     list-style-type: none;
     margin: 0;
@@ -176,6 +248,7 @@ button {
     font-size: 16px; /* Adjust font size as needed */
 }
 
+/* Common styles for both screens */
 .content {
     display: flex;
     flex-wrap: wrap; /* Allow content to wrap to next line if necessary */
@@ -183,14 +256,9 @@ button {
     padding: 20px; /* Adjust padding as needed */
 }
 
-.image-container {
-    flex: 0 0 400px; /* Fixed width for the image container */
-    margin-right: 20px; /* Margin between image and text */
-}
-
-.text-content {
-    flex: 1; /* Take up remaining space */
-    max-width: calc(100% - 420px); /* Adjust based on image width and margin */
+.image-container img {
+    max-width: 100%; /* Ensure image scales appropriately */
+    height: auto; /* Maintain aspect ratio */
 }
 
 .text-content h5 {
