@@ -148,3 +148,21 @@ h8 {
   .jc-center {
     justify-content: center;
   }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(117, 212, 227);
+    padding: 20px 10%;
+    color: white;
+}
+
+.header-content {
+    flex: 1; /* Take up remaining space */
+    margin-right: 20px; /* Adjust margin as needed */
+}
+
+h3, h6 {
+    margin: 0; /* Remove default margin */
+}
