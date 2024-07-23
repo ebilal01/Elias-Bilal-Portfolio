@@ -192,6 +192,18 @@ button {
     flex: 1; /* Take up remaining space */
     max-width: calc(100% - 420px); /* Adjust based on image width and margin */
 }
+
+.text-content h5 {
+    font-size: 30px; /* Adjust font size as needed */
+    font-family: "Lobster Two", sans-serif;
+    text-align: center;
+}
+.text-content p {
+    font-size: 20px; /* Adjust font size as needed */
+    line-height: 1.5;
+    color: black;
+    font-family: sans-serif;
+}
 .flex-parent {
     display: flex;
     justify-content: center;
