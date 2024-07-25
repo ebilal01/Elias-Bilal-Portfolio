@@ -285,7 +285,7 @@ button {
   }
 
 .grid {
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 20px;
     justify-content: center;
@@ -293,14 +293,14 @@ button {
 
 .row {
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* Distribute columns evenly */
+    max-width: 1200px; /* Adjust max-width as needed */
+    width: 100%; /* Occupy full width of the parent container */
 }
 
 .column {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-basis: calc(33.33% - 20px); /* Divide into thirds with equal spacing */
+    margin-right: 20px; /* Adjust spacing between columns */
 }
 
   .image {
@@ -310,14 +310,9 @@ button {
 
 .card {
     position: relative;
-    width: 100%;
-    background: #f9f9f9;
-    text-align: center;
-    padding: 20px;
-    margin-bottom: 20px; /* Add margin between cards */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    overflow: hidden; /* Ensure overflow is hidden for overlay */
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .card:last-child {
@@ -331,14 +326,13 @@ button {
 .imgBx {
     position: relative;
     overflow: hidden;
-    margin-bottom: 10px; /* Adjust spacing between image and overlay */
+    border-radius: 8px 8px 0 0; /* Rounded corners for the image container */
 }
 
 .imgBx img {
-    width: 100%; /* Ensure images take up full width of their container */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%;
+    height: auto;
     display: block;
-    transition: transform 0.3s ease;
 }
 
 .imgBx:hover img {
@@ -350,19 +344,20 @@ button {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.7); /* Adjust overlay background color */
-    color: white; /* Overlay text color */
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
     padding: 10px;
-    text-align: center;
-    opacity: 0;
+    border-radius: 0 0 8px 8px; /* Rounded corners for the overlay */
+    color: #fff;
+    opacity: 0; /* Initially hidden */
     transition: opacity 0.3s ease;
 }
 
-.overlay h2 {
-    margin: 0;
-    font-size: 1.5rem;
+.card:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
 }
 
-.card:hover .overlay {
-    opacity: 1;
+.overlay h2 {
+    font-size: 18px;
+    margin: 0;
+    text-align: center;
 }
