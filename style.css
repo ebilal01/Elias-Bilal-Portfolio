@@ -277,3 +277,116 @@ button {
     justify-content: center;
     margin-top: 10px; /* Adjust margin as needed */
 }
+ /* General photo layout */
+.image {
+    display: inline-flex;
+    margin: 1%;
+    padding: 1%;
+  }
+
+  /* Photo grid layout */
+.row , .centered-content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+.column , .centered-content {
+    flex: 28%;
+    max-width: 29%;
+    padding: 2%; /* Changes the space between images in a single row */
+  }
+
+  .grid , .centered-content{
+    margin-left: 0%;
+    margin-right: 1%;
+  }
+
+  .card {
+    display: inline-flex;
+    margin: 1%;
+    padding: 1%;
+    flex: 28%;
+    max-width: 29%;
+    padding: 2%; 
+    margin-left: 0%;
+    margin-right: 1%;
+    display: flex;
+    flex-wrap: wrap;
+
+    
+    
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 29%;
+    height: 400px;
+    background: #262626;
+    overflow: hidden;
+}
+.card .imgBx,
+.card .details {
+    display: inline-flex;
+    margin: 1%;
+    padding: 1%;
+    flex: 28%;
+    max-width: 29%;
+    padding: 2%; 
+    margin-left: 0%;
+    margin-right: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    transition: .5s;
+}
+.card .imgBx {
+    top: 0;
+    left: 0;
+}
+.card:hover .imgBx {
+    top: 0;
+    left: -100%;
+}
+.card .imgBx img {
+    display: flex;
+}
+.card .details {
+    background: #262626;
+    top: 0;
+    left: 100%;
+    padding: 60px 30px;
+}
+.card:hover .details {
+    top: 0;
+    left: 0%;
+}
+.card .details h2 {
+    color: #fff;
+    display: inline-flex;
+    margin: 1%;
+    padding: 1%;
+    flex: 28%;
+    max-width: 29%;
+    padding: 2%; 
+    margin-left: 0%;
+    margin-right: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #fff;
+
+}
+.card .details p {
+    display: inline-flex;
+    margin: 1%;
+    padding: 1%;
+    flex: 28%;
+    max-width: 29%;
+    padding: 2%; 
+    margin-left: 0%;
+    margin-right: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    color: #fff;
+}
+
