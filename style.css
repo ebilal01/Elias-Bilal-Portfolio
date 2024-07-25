@@ -284,24 +284,23 @@ button {
     padding: 1%;
   }
 
-  /* Photo grid layout */
-.row , .centered-content {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  /* Create four equal columns that sits next to each other */
-.column , .centered-content {
-    flex: 28%;
-    max-width: 29%;
-    padding: 2%; /* Changes the space between images in a single row */
-  }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-gap: 20px;
+    justify-content: center;
+}
 
-  .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  grid-gap: 20px;
-  justify-content: center;
+.row {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+}
+
+.column {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
 }
 
   .image {
@@ -310,36 +309,55 @@ button {
 }
 
 .card {
-  position: relative;
-  overflow: hidden;
+    background: #f9f9f9;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-.card .imgBx img {
-  width: 100%;
-  height: auto;
-  transition: transform 0.5s ease;
+.card:hover {
+    transform: translateY(-10px);
 }
 
-.card:hover .imgBx img {
-  transform: scale(1.1);
+.imgBx {
+    position: relative;
+    overflow: hidden;
 }
 
-.card .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Adjust overlay color and opacity */
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-align: center;
+.imgBx img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
 }
 
-.card:hover .overlay {
-  opacity: 1;
+.imgBx:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+.overlay h2,
+.overlay p {
+    margin: 0;
+    padding: 0;
 }
