@@ -285,23 +285,23 @@ button {
   }
 
 .grid {
-    display: flex;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 20px;
-    justify-content: center;
-}
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 20px;
+        justify-content: center;
+    }
 
-.row {
-    display: flex;
-    justify-content: space-between; /* Distribute columns evenly */
-    max-width: 1200px; /* Adjust max-width as needed */
-    width: 100%; /* Occupy full width of the parent container */
-}
+    .row {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
 
-.column {
-    flex-basis: calc(33.33% - 20px); /* Divide into thirds with equal spacing */
-    margin-right: 20px; /* Adjust spacing between columns */
-}
+    .column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
   .image {
     max-width: 100%;
@@ -313,6 +313,7 @@ button {
     overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Adjust as needed for spacing between top and bottom cards *
 }
 
 .card:last-child {
@@ -344,7 +345,7 @@ button {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    background: rgba(173, 216, 230, 0.7); /* Baby blue background color */
     padding: 10px;
     border-radius: 0 0 8px 8px; /* Rounded corners for the overlay */
     color: #fff;
