@@ -302,10 +302,15 @@ button {
     margin-right: 1%;
   }
 
-  .card {
+  .image {
+    max-width: 100%;
+    height: auto;
+}
+
+.card {
     position: relative;
     width: 100%;
-    max-width: 300px; /* Adjust as needed */
+    max-width: 300px;
     overflow: hidden;
 }
 
@@ -325,7 +330,7 @@ button {
 }
 
 .card .details {
-    background: rgba(38, 38, 38, 0.9); /* Semi-transparent black background */
+    background: rgba(38, 38, 38, 0.9);
     padding: 20px;
     color: #fff;
     text-align: center;
