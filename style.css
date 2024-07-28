@@ -317,6 +317,7 @@ button {
         display: flex;
     justify-content: space-between;
     width: 100%;
+	    gap: 20px; /* Adjust this value for desired padding between columns */
     }
 
     .columns {
