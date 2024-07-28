@@ -349,6 +349,8 @@ button {
 }
 
 .imgBx {
+	width: 100%;
+    max-width: 100%; /* Ensure all images have the same width */
     position: relative;
     overflow: hidden;
     border-radius: 8px 8px 0 0; /* Rounded corners for the image container */
