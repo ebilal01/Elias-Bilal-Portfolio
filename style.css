@@ -7,21 +7,27 @@ body {
     line-height: 1.5;
     font-family: Arial, sans-serif; /* Default font stack */
 }
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-    .nav_links {
-        flex-direction: column; /* Stack navigation items vertically on smaller screens */
+
+/* Global styles */
+@media (max-width: 480px) {
+    .overlay h2 {
+        font-size: 14px;
     }
 
-    .nav_links li {
-        margin: 10px 0; /* Adjust spacing between stacked navigation items */
+    .overlay p {
+        font-size: 10px;
     }
 }
-/* Global styles */
-
 /* Adjustments for smaller screens (e.g., phones) */
 /* Media query for smaller screens (e.g., phones) */
 @media (max-width: 768px) {
+	.overlay h2 {
+        font-size: 16px;
+    }
+
+    .overlay p {
+        font-size: 12px;
+    }
     /* Flexbox adjustments for navigation */
     .nav_links {
         flex-direction: column; /* Stack navigation items vertically on smaller screens */
