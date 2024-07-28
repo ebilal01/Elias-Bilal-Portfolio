@@ -368,12 +368,17 @@ button {
 
 .overlay {
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     right: 0;
-    background: rgba(173, 216, 230, 0.7); /* Baby blue background color */
+    bottom: 0;
+    background: rgba(173, 216, 230, 0.9); /* Baby blue background color */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 10px;
-    border-radius: 0 0 8px 8px; /* Rounded corners for the overlay */
+    border-radius: 8px; /* Rounded corners for the overlay */
     color: #fff;
     opacity: 0; /* Initially hidden */
     transition: opacity 0.3s ease;
@@ -386,5 +391,11 @@ button {
 .overlay h2 {
     font-size: 18px;
     margin: 0;
+    text-align: center;
+}
+
+.overlay p {
+    font-size: 14px;
+    margin-top: 10px;
     text-align: center;
 }
