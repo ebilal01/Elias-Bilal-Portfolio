@@ -18,12 +18,6 @@ body {
         font-size: 10px;
     }
 }
-.stillcenter {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-  }
 /* Adjustments for smaller screens (e.g., phones) */
 /* Media query for smaller screens (e.g., phones) */
 @media (max-width: 768px) {
@@ -66,12 +60,7 @@ body {
         font-family: Arial, sans-serif; /* Use default font stack */
     }
 }
-.stillcenter {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-  }
+
 /* Styles for larger screens (e.g., laptops) */
 @media (min-width: 769px) {
     /* Flexbox adjustments for content layout */
@@ -416,9 +405,8 @@ button {
     margin-top: 10px;
     text-align: center;
 }
-.stillcenter {
+.center-image {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-  }
+    margin: 0 auto;
+    text-align: center;
+}
