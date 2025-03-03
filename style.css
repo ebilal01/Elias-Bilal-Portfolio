@@ -405,3 +405,9 @@ button {
     margin-top: 10px;
     text-align: center;
 }
+.stillcenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
