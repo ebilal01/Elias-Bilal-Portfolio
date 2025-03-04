@@ -6,72 +6,370 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elias Bilal Portfolio</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&display=swap');
+        /* Importing Google Fonts */
+
         /* Global styles */
         body {
             font-size: 16px;
             line-height: 1.5;
-            font-family: Arial, sans-serif;
+            font-family: Arial, sans-serif; /* Default font stack */
+        }
+
+        /* Global styles */
+        @media (max-width: 480px) {
+            .overlay h2 {
+                font-size: 14px;
+            }
+
+            .overlay p {
+                font-size: 10px;
+            }
+        }
+        /* Adjustments for smaller screens (e.g., phones) */
+        /* Media query for smaller screens (e.g., phones) */
+        @media (max-width: 768px) {
+            .overlay h2 {
+                font-size: 16px;
+            }
+
+            .overlay p {
+                font-size: 12px;
+            }
+            /* Flexbox adjustments for navigation */
+            .nav_links {
+                flex-direction: column; /* Stack navigation items vertically on smaller screens */
+            }
+            .nav_links li {
+                margin: 10px 0; /* Adjust spacing between stacked navigation items */
+            }
+
+            /* Flexbox adjustments for content layout */
+            .content {
+                flex-direction: column; /* Stack items vertically on smaller screens */
+            }
+            .image-container {
+                width: 100%; /* Full width for the image container */
+                margin-bottom: 20px; /* Margin between image and text on smaller screens */
+            }
+            .text-content {
+                width: 100%; /* Full width for text content */
+                padding: 0 10px; /* Add padding for better spacing */
+            }
+            .text-content h5 {
+                font-size: 28px; /* Adjust font size for better readability */
+                text-align: center; /* Center align the welcome text */
+                font-family: "Lobster Two", sans-serif; /* Apply Lobster Two font */
+            }
+            .text-content p {
+                font-size: 16px; /* Adjust font size for better readability */
+                line-height: 1.5;
+                text-align: justify; /* Justify text for better appearance */
+                font-family: Arial, sans-serif; /* Use default font stack */
+            }
+        }
+
+        /* Styles for larger screens (e.g., laptops) */
+        @media (min-width: 769px) {
+            /* Flexbox adjustments for content layout */
+            .content {
+                flex-direction: row; /* Display items side by side on larger screens */
+                align-items: flex-start; /* Align items to the top */
+            }
+            .image-container {
+                flex: 0 0 400px; /* Fixed width for the image container */
+                margin-right: 20px; /* Margin between image and text on larger screens */
+            }
+            .text-content {
+                flex: 1; /* Take up remaining space */
+                max-width: calc(100% - 420px); /* Adjust based on image width and margin */
+            }
+            .text-content h5 {
+                font-size: 40px; /* Larger font size for welcome text on larger screens */
+                text-align: left; /* Left align the welcome text */
+                font-family: "Lobster Two", sans-serif; /* Apply Lobster Two font */
+            }
+            .text-content p {
+                font-size: 20px; /* Adjust font size for paragraph on larger screens */
+                line-height: 1.5;
+                text-align: justify; /* Justify text for better appearance */
+                font-family: Arial, sans-serif; /* Use default font stack */
+            }
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        body {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        button { 
+            font-family: "Lobster Two", sans-serif;
+            font-weight: 400;
+            font-size: 20px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: "Lobster Two";
+            padding: 30px 10%;
+            color: white;
+            line-height: 0.8;
+            padding-top: 0%;
+            padding-bottom: 0%;
+            margin-bottom: 5%;
+            background-color: rgb(117, 212, 227);
+        }
+
+        p {
+            margin-left: 10%;
+            margin-right: 10%;
+            width: 80%;
+            color: black;
+            font-size: 25px;
+            font-family: sans-serif;
+            line-height: 1.5;
+        }
+
+        h1 {
+            color: black;
+            font-size: 30px;
+            font-family: Arial;
+            line-height: 1.5;
+            align-items: center; 
+        }
+
+        h2 {
+            color: black;
+            font-size: 15px;
+            font-family: Arial;
+            line-height: 1.5;
+            align-items: center; 
+        }
+
+        h3 {
+            color: black;
+            font-size: 50px;
+            font-family: "Lobster Two";
+            line-height: 1.5;
+            align-items: center; 
+        }
+
+        h4 {
+            color: black;
+            font-size: 20px;
+            font-family: Arial;
+            line-height: 1.5;
+            align-items: center; 
+        }
+
+        h5 {
+            text-align: center;
+            color: black;
+            font-size: 40px;
+            font-family: "Lobster Two";
+            line-height: .15;
+        }
+
+        h6 {
+            color: black;
+            font-size: 25px;
+            font-family: Arial;
+            line-height: 1.5;
+            align-items: center; 
+        }
+
+        h7 {
+            padding-left: 5%;
+            color: black;
+            font-size: 25px;
+            font-family: sans-serif;
+            line-height: 1.5;
+            align-items: center; 
+        }
+
+        nav {
+            font-size: 20px;
+            font-family: Arial;
+            line-height: 1.5;
+        }
+
+        .nav_links {
+            list-style-type: none;
             margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center; /* Center the navigation links horizontally */
         }
 
-        /* Filter buttons */
-        .filter-buttons {
-            text-align: center;
-            margin: 20px 0;
-        }
-
-        .filter-buttons button {
+        .nav_links li {
             margin: 0 10px;
-            background-color: rgb(117, 212, 227);
-            border: none;
-            border-radius: 5px;
-            color: white;
-            transition: background-color 0.3s;
         }
 
-        .filter-buttons button:hover {
-            background-color: rgb(90, 180, 200);
+        .nav_links li a {
+            color: black;
+            text-decoration: none;
         }
 
-        /* Project grid */
+        .nav_links li a:hover {
+            text-decoration: underline;
+        }
+
         h8 {
             color: black;
             font-size: 50px;
-            font-family: "Lobster Two", sans-serif;
+            font-family: "Lobster Two";
             line-height: 1.5;
+            text-align: center; 
+        }
+
+        .flex-parent {
+            display: flex;
+        }
+
+        .jc-center {
+            justify-content: center;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(117, 212, 227);
+            padding: 20px 10%;
+            color: white;
+        }
+
+        .header-content {
+            flex: 1; /* Take up remaining space */
+            margin-right: 20px; /* Adjust margin as needed */
+        }
+
+        h3, h6 {
+            margin: 0; /* Remove default margin */
+        }
+
+        .contact-button {
+            margin-left: 20px; /* Adjust margin as needed */
+        }
+
+        button {
+            font-family: "Lobster Two", sans-serif;
+            font-size: 16px; /* Adjust font size as needed */
+        }
+
+        /* Common styles for both screens */
+        .content {
+            display: flex;
+            flex-wrap: wrap; /* Allow content to wrap to next line if necessary */
+            align-items: flex-start; /* Align items to the top */
+            padding: 20px; /* Adjust padding as needed */
+        }
+
+        .image-container img {
+            max-width: 100%; /* Ensure image scales appropriately */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        .text-content h5 {
+            font-size: 30px; /* Adjust font size as needed */
+            font-family: "Lobster Two", sans-serif;
             text-align: center;
-            margin: 20px 0;
+        }
+
+        .text-content p {
+            font-size: 20px; /* Adjust font size as needed */
+            line-height: 1.5;
+            color: black;
+            font-family: sans-serif;
+        }
+
+        .flex-parent {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px; /* Adjust margin as needed */
+        }
+
+        /* General photo layout */
+        .image {
+            display: inline-flex;
+            margin: 1%;
+            padding: 1%;
+        }
+
+        .grid {
+            margin-left: 0%;
+            margin-right: 1%;
+        }
+
+        /* Photo grid layout */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* Create four equal columns that sits next to each other */
+        .column {
+            flex: 28%;
+            max-width: 29%;
+            padding: 2%; /* Changes the space between images in a single row */
+        }
+
+        .column img {
+            margin: 6%; /* Changes the space between images in a single column*/
+            vertical-align: middle;
+            width: 100%;
         }
 
         .gridy {
-            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-gap: 40px;
+            justify-content: center;
         }
 
         .skidrow {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             width: 100%;
-            gap: 20px;
-            flex-wrap: wrap;
+            gap: 20px; /* Adjust this value for desired padding between columns */
         }
 
         .columns {
+            flex: 1;
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 300px;
+        }
+
+        .image {
+            max-width: 100%;
+            height: auto;
         }
 
         .card {
             position: relative;
-            width: 300px;
-            height: 250px;
+            width: 100%; /* Ensure cards fill their columns */
+            max-width: 300px; /* Consistent maximum width */
             overflow: hidden;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            transition: transform 0.3s;
+            margin-bottom: 20px; /* Adjust as needed for spacing between top and bottom cards */
+        }
+
+        .card:last-child {
+            margin-bottom: 0; /* Remove margin from last card in each column */
         }
 
         .card:hover {
@@ -81,15 +379,15 @@
         .imgBx {
             position: relative;
             width: 100%;
-            height: 200px;
+            height: 200px; /* Fixed height for uniform size */
             overflow: hidden;
-            border-radius: 8px 8px 0 0;
+            border-radius: 8px 8px 0 0; /* Rounded corners for the image container */
         }
 
         .imgBx img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: 100%; /* Fill the container */
+            object-fit: cover; /* Maintain aspect ratio while filling */
             display: block;
         }
 
@@ -103,34 +401,61 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(173, 216, 230, 0.9);
+            background: rgba(173, 216, 230, 0.9); /* Baby blue background color */
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             padding: 10px;
-            border-radius: 8px;
+            border-radius: 8px; /* Rounded corners for the overlay */
             color: #fff;
-            opacity: 0;
+            opacity: 0; /* Initially hidden */
             transition: opacity 0.3s ease;
         }
 
         .card:hover .overlay {
-            opacity: 1;
+            opacity: 1; /* Show overlay on hover */
         }
 
         .overlay h2 {
             font-size: 18px;
             margin: 0;
             text-align: center;
-            font-family: Arial, sans-serif;
         }
 
         .overlay p {
             font-size: 14px;
             margin-top: 10px;
             text-align: center;
-            font-family: Arial, sans-serif;
+        }
+
+        .center-image {
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* Filter buttons (added to match your new HTML) */
+        .filter-buttons {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .filter-buttons button {
+            margin: 0 10px;
+            background-color: rgb(117, 212, 227);
+            border: none;
+            border-radius: 5px;
+            color: white;
+            transition: background-color 0.3s;
+            font-family: "Lobster Two", sans-serif;
+            font-weight: 400;
+            font-size: 20px;
+            padding: 10px 20px;
+        }
+
+        .filter-buttons button:hover {
+            background-color: rgb(90, 180, 200);
         }
 
         /* Hide class */
@@ -146,14 +471,14 @@
             <h6>Mechanical Engineer</h6>
         </div>
         <nav>
-    <ul class="nav_links">
-        <li><a href="index.html">about me</a></li>
-        <li><a href="engineering.html">engineering</a></li>
-        <li><a href="art.html">art</a></li>
-    </ul>
-</nav>
+            <ul class="nav_links">
+                <li><a href="index.html">about me</a></li>
+                <li><a href="engineering.html">engineering</a></li>
+                <li><a href="art.html">art</a></li>
+            </ul>
+        </nav>
         <div class="contact-button">
-        <button><a type="submit" onclick = "location.href= 'contact.html'" >Contact</a></button>
+            <button><a type="submit" onclick="location.href='contact.html'">Contact</a></button>
         </div>
     </header>
 
