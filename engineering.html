@@ -13,10 +13,9 @@
         body {
             font-size: 16px;
             line-height: 1.5;
-            font-family: Arial, sans-serif; /* Default font stack */
+            font-family: Arial, sans-serif;
         }
 
-        /* Global styles */
         @media (max-width: 480px) {
             .overlay h2 {
                 font-size: 14px;
@@ -25,7 +24,7 @@
                 font-size: 10px;
             }
         }
-        /* Adjustments for smaller screens (e.g., phones) */
+
         @media (max-width: 768px) {
             .overlay h2 {
                 font-size: 16px;
@@ -350,11 +349,12 @@
             position: relative;
             width: 100%;
             max-width: 300px;
-            height: 300px; /* Increased from 250px */
+            height: 300px;
             overflow: hidden;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
+            background-color: white; /* Ensure white background for title area */
         }
 
         .card:last-child {
@@ -368,7 +368,7 @@
         .imgBx {
             position: relative;
             width: 100%;
-            height: 250px; /* Increased from 200px */
+            height: 250px;
             overflow: hidden;
             border-radius: 8px 8px 0 0;
         }
@@ -382,6 +382,22 @@
 
         .imgBx:hover img {
             transform: scale(1.1);
+        }
+
+        .card-title {
+            height: 50px; /* Remaining space below image */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 10px;
+            text-align: center;
+        }
+
+        .card-title h2 {
+            font-size: 16px; /* Smaller to fit in 50px height */
+            margin: 0;
+            color: black;
+            font-family: Arial, sans-serif;
         }
 
         .overlay {
@@ -406,15 +422,9 @@
             opacity: 1;
         }
 
-        .overlay h2 {
-            font-size: 18px;
-            margin: 0;
-            text-align: center;
-        }
-
         .overlay p {
             font-size: 14px;
-            margin-top: 10px;
+            margin: 0;
             text-align: center;
         }
 
@@ -489,9 +499,11 @@
                         <div class="imgBx">
                             <img src="Screenshot 2025-02-18 135438.png" alt="Line Follower Image">
                             <div class="overlay">
-                                <h2>Line Follower</h2>
                                 <p></p>
                             </div>
+                        </div>
+                        <div class="card-title">
+                            <h2>Line Follower</h2>
                         </div>
                     </a>
                 </div>
@@ -501,9 +513,11 @@
                         <div class="imgBx">
                             <img src="IMG_9538.jpg" alt="Sorter">
                             <div class="overlay">
-                                <h2>Ball Sorter</h2>
                                 <p></p>
                             </div>
+                        </div>
+                        <div class="card-title">
+                            <h2>Ball Sorter</h2>
                         </div>
                     </a>
                 </div>
@@ -517,9 +531,11 @@
                         <div class="imgBx">
                             <img src="Screenshot 2025-03-03 210312.png" alt="NASA Image">
                             <div class="overlay">
-                                <h2>Tufts Anemometer Mission Site</h2>
                                 <p>Developed a PyScript Webhook site that parses hex encoded data and displays sensor readings live.</p>
                             </div>
+                        </div>
+                        <div class="card-title">
+                            <h2>Tufts Anemometer Mission Site</h2>
                         </div>
                     </a>
                 </div>
@@ -529,9 +545,11 @@
                         <div class="imgBx">
                             <img src="Screenshot 2024-02-12 135622.png" alt="Machine Learning Pyscript Website Image">
                             <div class="overlay">
-                                <h2>Machine Learning Site</h2>
                                 <p>Coded an algorithm that can determine someone's lung cancer risk and generate graphs using Python, Pandas, and Numpy. Then I made it website accessible and operational using JavaScript, HTML and Render.</p>
                             </div>
+                        </div>
+                        <div class="card-title">
+                            <h2>Machine Learning Site</h2>
                         </div>
                     </a>
                 </div>
@@ -541,9 +559,11 @@
                         <div class="imgBx">
                             <img src="Screen Shot 2023-03-21 at 1.36.53 PM (1).png" alt="American Sign Language App Image">
                             <div class="overlay">
-                                <h2>American Sign Language App</h2>
                                 <p>Coded an app that can show you how to spell anything in ASL using JavaScript</p>
                             </div>
+                        </div>
+                        <div class="card-title">
+                            <h2>American Sign Language App</h2>
                         </div>
                     </a>
                 </div>
@@ -557,9 +577,11 @@
                         <div class="imgBx">
                             <img src="IMG_0966.jpg" alt="Electric Scooter Image">
                             <div class="overlay">
-                                <h2>Electric Scooter</h2>
                                 <p>Designed, calculated, budgeted, programmed, manufactured, assembled, and documented a fully functional electric scooter with solar power compatibility.</p>
                             </div>
+                        </div>
+                        <div class="card-title">
+                            <h2>Electric Scooter</h2>
                         </div>
                     </a>
                 </div>
@@ -569,9 +591,11 @@
                         <div class="imgBx">
                             <img src="pumpkin.JPG" alt="SolidWorks Designs Image">
                             <div class="overlay">
-                                <h2>SOLIDWORKS Designs</h2>
                                 <p>See my SOLIDWORKS models and force distribution analysis diagrams</p>
                             </div>
+                        </div>
+                        <div class="card-title">
+                            <h2>SOLIDWORKS Designs</h2>
                         </div>
                     </a>
                 </div>
@@ -612,4 +636,3 @@
     </script>
 </body>
 </html>
-
