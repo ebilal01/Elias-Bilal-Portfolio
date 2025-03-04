@@ -15,63 +15,6 @@
             padding: 0;
         }
 
-        /* Header styles */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: rgb(117, 212, 227);
-            padding: 20px 10%;
-            color: white;
-        }
-
-        .header-content h3 {
-            font-size: 50px;
-            font-family: "Lobster Two", sans-serif;
-            margin: 0;
-        }
-
-        .header-content h6 {
-            font-size: 25px;
-            font-family: Arial, sans-serif;
-            margin: 0;
-        }
-
-        nav {
-            font-size: 20px;
-            font-family: Arial, sans-serif; /* Reverted to original */
-            line-height: 1.5;
-        }
-
-        nav ul {
-            list-style-type: none;
-            display: flex;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav ul li {
-            margin: 0 10px;
-        }
-
-        nav ul li a {
-            color: black;
-            text-decoration: none;
-        }
-
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
-
-        /* Contact button reverted to original */
-        button {
-            font-family: "Lobster Two", sans-serif;
-            font-size: 20px;
-            font-weight: 400;
-            padding: 10px 20px;
-            cursor: pointer;
-        }
-
         /* Filter buttons */
         .filter-buttons {
             text-align: center;
@@ -203,15 +146,14 @@
             <h6>Mechanical Engineer</h6>
         </div>
         <nav>
-            <ul class="nav_links" style="color: black; text-decoration: none;">
-                <li><a href="https://ebilal01.github.io/Elias-Bilal-Portfolio/index.html" style="color: black; text-decoration: none;">about me</a></li>
-                <li><a href="https://ebilal01.github.io/Elias-Bilal-Portfolio/engineering.html" style="color: black; text-decoration: none;">engineering</a></li>
-                <li><a href="https://ebilal01.github.io/Elias-Bilal-Portfolio/art.html" style="color: black; text-decoration: none;">art</a></li>
-                <li><a href="index.html" style="color: black; text-decoration: none;">ME 35</a></li>
-            </ul>
-        </nav>
+    <ul class="nav_links">
+        <li><a href="index.html">about me</a></li>
+        <li><a href="engineering.html">engineering</a></li>
+        <li><a href="art.html">art</a></li>
+    </ul>
+</nav>
         <div class="contact-button">
-            <button><a href="contact.html">Contact</a></button>
+        <button><a type="submit" onclick = "location.href= 'contact.html'" >Contact</a></button>
         </div>
     </header>
 
