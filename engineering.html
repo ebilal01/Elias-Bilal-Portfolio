@@ -21,79 +21,71 @@
             .overlay h2 {
                 font-size: 14px;
             }
-
             .overlay p {
                 font-size: 10px;
             }
         }
         /* Adjustments for smaller screens (e.g., phones) */
-        /* Media query for smaller screens (e.g., phones) */
         @media (max-width: 768px) {
             .overlay h2 {
                 font-size: 16px;
             }
-
             .overlay p {
                 font-size: 12px;
             }
-            /* Flexbox adjustments for navigation */
             .nav_links {
-                flex-direction: column; /* Stack navigation items vertically on smaller screens */
+                flex-direction: column;
             }
             .nav_links li {
-                margin: 10px 0; /* Adjust spacing between stacked navigation items */
+                margin: 10px 0;
             }
-
-            /* Flexbox adjustments for content layout */
             .content {
-                flex-direction: column; /* Stack items vertically on smaller screens */
+                flex-direction: column;
             }
             .image-container {
-                width: 100%; /* Full width for the image container */
-                margin-bottom: 20px; /* Margin between image and text on smaller screens */
+                width: 100%;
+                margin-bottom: 20px;
             }
             .text-content {
-                width: 100%; /* Full width for text content */
-                padding: 0 10px; /* Add padding for better spacing */
+                width: 100%;
+                padding: 0 10px;
             }
             .text-content h5 {
-                font-size: 28px; /* Adjust font size for better readability */
-                text-align: center; /* Center align the welcome text */
-                font-family: "Lobster Two", sans-serif; /* Apply Lobster Two font */
+                font-size: 28px;
+                text-align: center;
+                font-family: "Lobster Two", sans-serif;
             }
             .text-content p {
-                font-size: 16px; /* Adjust font size for better readability */
+                font-size: 16px;
                 line-height: 1.5;
-                text-align: justify; /* Justify text for better appearance */
-                font-family: Arial, sans-serif; /* Use default font stack */
+                text-align: justify;
+                font-family: Arial, sans-serif;
             }
         }
 
-        /* Styles for larger screens (e.g., laptops) */
         @media (min-width: 769px) {
-            /* Flexbox adjustments for content layout */
             .content {
-                flex-direction: row; /* Display items side by side on larger screens */
-                align-items: flex-start; /* Align items to the top */
+                flex-direction: row;
+                align-items: flex-start;
             }
             .image-container {
-                flex: 0 0 400px; /* Fixed width for the image container */
-                margin-right: 20px; /* Margin between image and text on larger screens */
+                flex: 0 0 400px;
+                margin-right: 20px;
             }
             .text-content {
-                flex: 1; /* Take up remaining space */
-                max-width: calc(100% - 420px); /* Adjust based on image width and margin */
+                flex: 1;
+                max-width: calc(100% - 420px);
             }
             .text-content h5 {
-                font-size: 40px; /* Larger font size for welcome text on larger screens */
-                text-align: left; /* Left align the welcome text */
-                font-family: "Lobster Two", sans-serif; /* Apply Lobster Two font */
+                font-size: 40px;
+                text-align: left;
+                font-family: "Lobster Two", sans-serif;
             }
             .text-content p {
-                font-size: 20px; /* Adjust font size for paragraph on larger screens */
+                font-size: 20px;
                 line-height: 1.5;
-                text-align: justify; /* Justify text for better appearance */
-                font-family: Arial, sans-serif; /* Use default font stack */
+                text-align: justify;
+                font-family: Arial, sans-serif;
             }
         }
 
@@ -210,7 +202,7 @@
             margin: 0;
             padding: 0;
             display: flex;
-            justify-content: center; /* Center the navigation links horizontally */
+            justify-content: center;
         }
 
         .nav_links li {
@@ -252,44 +244,43 @@
         }
 
         .header-content {
-            flex: 1; /* Take up remaining space */
-            margin-right: 20px; /* Adjust margin as needed */
+            flex: 1;
+            margin-right: 20px;
         }
 
         h3, h6 {
-            margin: 0; /* Remove default margin */
+            margin: 0;
         }
 
         .contact-button {
-            margin-left: 20px; /* Adjust margin as needed */
+            margin-left: 20px;
         }
 
         button {
             font-family: "Lobster Two", sans-serif;
-            font-size: 16px; /* Adjust font size as needed */
+            font-size: 16px;
         }
 
-        /* Common styles for both screens */
         .content {
             display: flex;
-            flex-wrap: wrap; /* Allow content to wrap to next line if necessary */
-            align-items: flex-start; /* Align items to the top */
-            padding: 20px; /* Adjust padding as needed */
+            flex-wrap: wrap;
+            align-items: flex-start;
+            padding: 20px;
         }
 
         .image-container img {
-            max-width: 100%; /* Ensure image scales appropriately */
-            height: auto; /* Maintain aspect ratio */
+            max-width: 100%;
+            height: auto;
         }
 
         .text-content h5 {
-            font-size: 30px; /* Adjust font size as needed */
+            font-size: 30px;
             font-family: "Lobster Two", sans-serif;
             text-align: center;
         }
 
         .text-content p {
-            font-size: 20px; /* Adjust font size as needed */
+            font-size: 20px;
             line-height: 1.5;
             color: black;
             font-family: sans-serif;
@@ -298,10 +289,9 @@
         .flex-parent {
             display: flex;
             justify-content: center;
-            margin-top: 10px; /* Adjust margin as needed */
+            margin-top: 10px;
         }
 
-        /* General photo layout */
         .image {
             display: inline-flex;
             margin: 1%;
@@ -313,21 +303,19 @@
             margin-right: 1%;
         }
 
-        /* Photo grid layout */
         .row {
             display: flex;
             flex-wrap: wrap;
         }
 
-        /* Create four equal columns that sits next to each other */
         .column {
             flex: 28%;
             max-width: 29%;
-            padding: 2%; /* Changes the space between images in a single row */
+            padding: 2%;
         }
 
         .column img {
-            margin: 6%; /* Changes the space between images in a single column*/
+            margin: 6%;
             vertical-align: middle;
             width: 100%;
         }
@@ -343,7 +331,7 @@
             display: flex;
             justify-content: space-between;
             width: 100%;
-            gap: 20px; /* Adjust this value for desired padding between columns */
+            gap: 20px;
         }
 
         .columns {
@@ -360,16 +348,17 @@
 
         .card {
             position: relative;
-            width: 100%; /* Ensure cards fill their columns */
-            max-width: 300px; /* Consistent maximum width */
+            width: 100%;
+            max-width: 300px;
+            height: 300px; /* Increased from 250px */
             overflow: hidden;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px; /* Adjust as needed for spacing between top and bottom cards */
+            margin-bottom: 20px;
         }
 
         .card:last-child {
-            margin-bottom: 0; /* Remove margin from last card in each column */
+            margin-bottom: 0;
         }
 
         .card:hover {
@@ -379,15 +368,15 @@
         .imgBx {
             position: relative;
             width: 100%;
-            height: 200px; /* Fixed height for uniform size */
+            height: 250px; /* Increased from 200px */
             overflow: hidden;
-            border-radius: 8px 8px 0 0; /* Rounded corners for the image container */
+            border-radius: 8px 8px 0 0;
         }
 
         .imgBx img {
             width: 100%;
-            height: 100%; /* Fill the container */
-            object-fit: cover; /* Maintain aspect ratio while filling */
+            height: 100%;
+            object-fit: cover;
             display: block;
         }
 
@@ -401,20 +390,20 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(173, 216, 230, 0.9); /* Baby blue background color */
+            background: rgba(173, 216, 230, 0.9);
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             padding: 10px;
-            border-radius: 8px; /* Rounded corners for the overlay */
+            border-radius: 8px;
             color: #fff;
-            opacity: 0; /* Initially hidden */
+            opacity: 0;
             transition: opacity 0.3s ease;
         }
 
         .card:hover .overlay {
-            opacity: 1; /* Show overlay on hover */
+            opacity: 1;
         }
 
         .overlay h2 {
@@ -435,7 +424,6 @@
             text-align: center;
         }
 
-        /* Filter buttons (added to match your new HTML) */
         .filter-buttons {
             text-align: center;
             margin: 20px 0;
@@ -458,7 +446,6 @@
             background-color: rgb(90, 180, 200);
         }
 
-        /* Hide class */
         .hidden {
             display: none;
         }
@@ -524,6 +511,18 @@
 
             <!-- Computer Science Projects -->
             <div class="columns computer">
+                <!-- Card 7: Tufts Sonic Anemometer Mission Site -->
+                <div class="card" data-category="computer">
+                    <a href="https://ultrasonic-anemometer.onrender.com/">
+                        <div class="imgBx">
+                            <img src="Screenshot 2025-03-03 210312.png" alt="NASA Image">
+                            <div class="overlay">
+                                <h2>Tufts Anemometer Mission Site</h2>
+                                <p>Developed a PyScript Webhook site that parses hex encoded data and displays sensor readings live.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
                 <!-- Card 2: Machine Learning Site -->
                 <div class="card" data-category="computer">
                     <a href="https://elias-bilal-portfolio-2.onrender.com">
@@ -550,7 +549,7 @@
                 </div>
             </div>
 
-            <!-- Other Projects (including Electric Scooter for All and Mechanical) -->
+            <!-- Other Projects -->
             <div class="columns all">
                 <!-- Card 4: Electric Scooter -->
                 <div class="card" data-category="mechanical">
@@ -585,21 +584,18 @@
             const cards = document.querySelectorAll('.card');
             const columns = document.querySelectorAll('.columns');
 
-            // Hide all columns initially
             columns.forEach(column => column.classList.add('hidden'));
 
-            // Show/hide cards based on category
             cards.forEach(card => {
                 const cardCategory = card.getAttribute('data-category');
                 if (category === 'all' || cardCategory === category) {
                     card.classList.remove('hidden');
-                    card.parentElement.parentElement.classList.remove('hidden'); // Show the parent column
+                    card.parentElement.parentElement.classList.remove('hidden');
                 } else {
                     card.classList.add('hidden');
                 }
             });
 
-            // Ensure columns with visible cards remain visible
             columns.forEach(column => {
                 const visibleCards = column.querySelectorAll('.card:not(.hidden)');
                 if (visibleCards.length > 0) {
@@ -610,7 +606,6 @@
             });
         }
 
-        // Default to showing all projects on page load
         window.onload = function() {
             filterProjects('all');
         };
