@@ -5,7 +5,188 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elias Bilal Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="./style.css">
+    <style>
+        /* Global styles */
+        body {
+            font-size: 16px;
+            line-height: 1.5;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header styles */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(117, 212, 227);
+            padding: 20px 10%;
+            color: white;
+        }
+
+        .header-content h3 {
+            font-size: 50px;
+            font-family: "Lobster Two", cursive;
+            margin: 0;
+        }
+
+        .header-content h6 {
+            font-size: 25px;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: black;
+            text-decoration: none;
+            font-size: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        button {
+            font-family: "Lobster Two", cursive;
+            font-size: 16px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        /* Filter buttons */
+        .filter-buttons {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .filter-buttons button {
+            margin: 0 10px;
+            background-color: rgb(117, 212, 227);
+            border: none;
+            border-radius: 5px;
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        .filter-buttons button:hover {
+            background-color: rgb(90, 180, 200);
+        }
+
+        /* Project grid */
+        h8 {
+            color: black;
+            font-size: 50px;
+            font-family: "Lobster Two", cursive;
+            line-height: 1.5;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .gridy {
+            padding: 20px;
+        }
+
+        .skidrow {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .columns {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 300px;
+        }
+
+        .card {
+            position: relative;
+            width: 300px;
+            height: 250px;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .imgBx {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .imgBx img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .imgBx:hover img {
+            transform: scale(1.1);
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(173, 216, 230, 0.9);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            border-radius: 8px;
+            color: #fff;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .card:hover .overlay {
+            opacity: 1;
+        }
+
+        .overlay h2 {
+            font-size: 18px;
+            margin: 0;
+            text-align: center;
+        }
+
+        .overlay p {
+            font-size: 14px;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        /* Hide class */
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -21,104 +202,134 @@
             </ul>
         </nav>
         <div class="contact-button">
-            <button><a href="contact.html">Contact</a></button>
+            <button><a href="contact.html" style="color: white; text-decoration: none;">Contact</a></button>
         </div>
     </header>
-    <article>
-<center><h8>Projects</h8></center>
-        </article>
-   <article class="gridy">
-    <div class="skidrow">
-        <div class="columns">
-            <!-- Card 1 -->
-            <div class="card">
-                <a href="driver.html">
-                <div class="imgBx">
-                        <img 
-                            src="Screenshot 2025-02-18 135438.png" alt="Dancing Skeleton Image">
-                    <div class="overlay">
-                        <h2>Line Follower</h2>
-                        <p></p>
-                    </div>
-                </div>
-            </a>
-            </div>
 
-            <!-- Card 2 -->
-            <div class="card">
-                <a href="https://elias-bilal-portfolio-2.onrender.com">
-                <div class="imgBx">
-                        <img src="Screenshot 2024-02-12 135622.png" alt="Machine Learning Pyscript Website Image">
-                    <div class="overlay">
-                        <h2>Pyscript Machine Learning Website</h2>
-                        <p> Coded an algorithm that can determine someone's lung cancer risk and generate graphs using Python, Pandas, and Numpy. Then I made it website accessible and operational using JavaScript, HTML and Render. </p>
-                    </div>
-                </div>
-            </a>
-            </div>
-        </div>
-
-        <div class="columns">
-            <!-- Card 3 -->
-            <div class="card">
-                <a href="sorter.html">
-                <div class="imgBx">
-                        <img 
-                            src="IMG_9538.jpg" alt="Sorter">
-                    <div class="overlay">
-                        <h2>Ball Sorter</h2>
-                        <p></p>
-                    </div>
-                </div>
-            </a>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="card">
-                <a href="scooter.html">
-                <div class="imgBx">
-                        <img 
-                            src="IMG_0966.jpg" alt="Electric Scooter Image">
-                    <div class="overlay">
-                        <h2>Electric Scooter</h2>
-                        <p>Designed, calculated, budgeted, programmed, manufactured, assembled, and documented a fully functional electric scooter with solar power compatability.</p>
-                    </div>
-                </div>
-            </a>
-            </div>
-        </div>
-
-        <div class="columns">
-            <!-- Card 5 -->
-            <div class="card">
-                <a href="https://studio.code.org/projects/applab/uJlgKVO_HsTKCGYcEMvtqg7A-r1FKxl0xQVliN1B_cs">
-                <div class="imgBx">
-                        <img 
-                            src="Screen Shot 2023-03-21 at 1.36.53 PM (1).png" alt="American Sign Language App Image">
-                    <div class="overlay">
-                        <h2>American Sign Language App</h2>
-                        <p> Coded an app that can show you how to spell anything in ASL using JavaScript</p>
-                    </div>
-                </div>
-            </a>
-            </div>
-
-            <!-- Card 6 -->
-            <div class="card">
-                 <a href="Materialsdesigns.html" target="_self">
-                <div class="imgBx">
-                        <img 
-                            src="pumpkin.JPG" alt="SolidWorks Designs Image">
-                    <div class="overlay">
-                        <h2>SOLIDWORKS Designs</h2>
-                        <p> See my SOLIDWORKS models and force distribution analysis diagrams</p>
-                    </div>
-                </div>
-            </a>
-            </div>
-        </div>
+    <div class="filter-buttons">
+        <button onclick="filterProjects('mechanical')">Mechanical Engineering</button>
+        <button onclick="filterProjects('computer')">Computer Science</button>
+        <button onclick="filterProjects('all')">All</button>
     </div>
-</article>
+
+    <article>
+        <center><h8>Projects</h8></center>
+    </article>
+
+    <article class="gridy">
+        <div class="skidrow">
+            <!-- Mechanical Engineering Projects -->
+            <div class="columns mechanical">
+                <!-- Card 1: Line Follower -->
+                <div class="card">
+                    <a href="driver.html">
+                        <div class="imgBx">
+                            <img src="Screenshot 2025-02-18 135438.png" alt="Line Follower Image">
+                            <div class="overlay">
+                                <h2>Line Follower</h2>
+                                <p></p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Card 3: Ball Sorter -->
+                <div class="card">
+                    <a href="sorter.html">
+                        <div class="imgBx">
+                            <img src="IMG_9538.jpg" alt="Sorter">
+                            <div class="overlay">
+                                <h2>Ball Sorter</h2>
+                                <p></p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Card 4: Electric Scooter -->
+                <div class="card">
+                    <a href="scooter.html">
+                        <div class="imgBx">
+                            <img src="IMG_0966.jpg" alt="Electric Scooter Image">
+                            <div class="overlay">
+                                <h2>Electric Scooter</h2>
+                                <p>Designed, calculated, budgeted, programmed, manufactured, assembled, and documented a fully functional electric scooter with solar power compatibility.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Computer Science Projects -->
+            <div class="columns computer">
+                <!-- Card 2: Machine Learning Site -->
+                <div class="card">
+                    <a href="https://elias-bilal-portfolio-2.onrender.com">
+                        <div class="imgBx">
+                            <img src="Screenshot 2024-02-12 135622.png" alt="Machine Learning Pyscript Website Image">
+                            <div class="overlay">
+                                <h2>Machine Learning Site</h2>
+                                <p>Coded an algorithm that can determine someone's lung cancer risk and generate graphs using Python, Pandas, and Numpy. Then I made it website accessible and operational using JavaScript, HTML and Render.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Card 5: ASL App -->
+                <div class="card">
+                    <a href="https://studio.code.org/projects/applab/uJlgKVO_HsTKCGYcEMvtqg7A-r1FKxl0xQVliN1B_cs">
+                        <div class="imgBx">
+                            <img src="Screen Shot 2023-03-21 at 1.36.53 PM (1).png" alt="American Sign Language App Image">
+                            <div class="overlay">
+                                <h2>American Sign Language App</h2>
+                                <p>Coded an app that can show you how to spell anything in ASL using JavaScript</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Other Projects (shown in All) -->
+            <div class="columns all">
+                <!-- Card 6: SOLIDWORKS Designs -->
+                <div class="card">
+                    <a href="Materialsdesigns.html" target="_self">
+                        <div class="imgBx">
+                            <img src="pumpkin.JPG" alt="SolidWorks Designs Image">
+                            <div class="overlay">
+                                <h2>SOLIDWORKS Designs</h2>
+                                <p>See my SOLIDWORKS models and force distribution analysis diagrams</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <script>
+        function filterProjects(category) {
+            const mechanical = document.querySelector('.mechanical');
+            const computer = document.querySelector('.computer');
+            const all = document.querySelector('.all');
+
+            if (category === 'mechanical') {
+                mechanical.classList.remove('hidden');
+                computer.classList.add('hidden');
+                all.classList.add('hidden');
+            } else if (category === 'computer') {
+                mechanical.classList.add('hidden');
+                computer.classList.remove('hidden');
+                all.classList.add('hidden');
+            } else {
+                mechanical.classList.remove('hidden');
+                computer.classList.remove('hidden');
+                all.classList.remove('hidden');
+            }
+        }
+
+        // Default to showing all projects on page load
+        window.onload = function() {
+            filterProjects('all');
+        };
+    </script>
 </body>
 </html>
 
