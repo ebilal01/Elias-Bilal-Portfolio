@@ -37,6 +37,12 @@
             margin: 0;
         }
 
+        nav {
+            font-size: 20px;
+            font-family: Arial, sans-serif; /* Reverted to original */
+            line-height: 1.5;
+        }
+
         nav ul {
             list-style-type: none;
             display: flex;
@@ -51,8 +57,6 @@
         nav ul li a {
             color: black;
             text-decoration: none;
-            font-size: 20px;
-            font-family: Arial, sans-serif;
         }
 
         nav ul li a:hover {
@@ -62,8 +66,8 @@
         /* Contact button reverted to original */
         button {
             font-family: "Lobster Two", sans-serif;
-            font-size: 20px; /* From original CSS */
-            font-weight: 400; /* From original CSS */
+            font-size: 20px;
+            font-weight: 400;
             padding: 10px 20px;
             cursor: pointer;
         }
@@ -176,14 +180,14 @@
             font-size: 18px;
             margin: 0;
             text-align: center;
-            font-family: Arial, sans-serif; /* Reverted to original */
+            font-family: Arial, sans-serif;
         }
 
         .overlay p {
             font-size: 14px;
             margin-top: 10px;
             text-align: center;
-            font-family: Arial, sans-serif; /* Reverted to original */
+            font-family: Arial, sans-serif;
         }
 
         /* Hide class */
@@ -226,7 +230,7 @@
             <!-- Mechanical Engineering Projects -->
             <div class="columns mechanical">
                 <!-- Card 1: Line Follower -->
-                <div class="card mechanical">
+                <div class="card" data-category="mechanical">
                     <a href="driver.html">
                         <div class="imgBx">
                             <img src="Screenshot 2025-02-18 135438.png" alt="Line Follower Image">
@@ -238,7 +242,7 @@
                     </a>
                 </div>
                 <!-- Card 3: Ball Sorter -->
-                <div class="card mechanical">
+                <div class="card" data-category="mechanical">
                     <a href="sorter.html">
                         <div class="imgBx">
                             <img src="IMG_9538.jpg" alt="Sorter">
@@ -254,7 +258,7 @@
             <!-- Computer Science Projects -->
             <div class="columns computer">
                 <!-- Card 2: Machine Learning Site -->
-                <div class="card computer">
+                <div class="card" data-category="computer">
                     <a href="https://elias-bilal-portfolio-2.onrender.com">
                         <div class="imgBx">
                             <img src="Screenshot 2024-02-12 135622.png" alt="Machine Learning Pyscript Website Image">
@@ -266,7 +270,7 @@
                     </a>
                 </div>
                 <!-- Card 5: ASL App -->
-                <div class="card computer">
+                <div class="card" data-category="computer">
                     <a href="https://studio.code.org/projects/applab/uJlgKVO_HsTKCGYcEMvtqg7A-r1FKxl0xQVliN1B_cs">
                         <div class="imgBx">
                             <img src="Screen Shot 2023-03-21 at 1.36.53 PM (1).png" alt="American Sign Language App Image">
@@ -282,7 +286,7 @@
             <!-- Other Projects (including Electric Scooter for All and Mechanical) -->
             <div class="columns all">
                 <!-- Card 4: Electric Scooter -->
-                <div class="card mechanical">
+                <div class="card" data-category="mechanical">
                     <a href="scooter.html">
                         <div class="imgBx">
                             <img src="IMG_0966.jpg" alt="Electric Scooter Image">
@@ -294,7 +298,7 @@
                     </a>
                 </div>
                 <!-- Card 6: SOLIDWORKS Designs -->
-                <div class="card">
+                <div class="card" data-category="all">
                     <a href="Materialsdesigns.html" target="_self">
                         <div class="imgBx">
                             <img src="pumpkin.JPG" alt="SolidWorks Designs Image">
@@ -311,29 +315,32 @@
 
     <script>
         function filterProjects(category) {
-            const mechanicalColumn = document.querySelector('.columns.mechanical');
-            const computerColumn = document.querySelector('.columns.computer');
-            const allColumn = document.querySelector('.columns.all');
-            const mechanicalCards = document.querySelectorAll('.card.mechanical');
-            const computerCards = document.querySelectorAll('.card.computer');
+            const cards = document.querySelectorAll('.card');
+            const columns = document.querySelectorAll('.columns');
 
-            if (category === 'mechanical') {
-                mechanicalColumn.classList.remove('hidden');
-                computerColumn.classList.add('hidden');
-                allColumn.classList.add('hidden');
-                mechanicalCards.forEach(card => card.classList.remove('hidden'));
-            } else if (category === 'computer') {
-                mechanicalColumn.classList.add('hidden');
-                computerColumn.classList.remove('hidden');
-                allColumn.classList.add('hidden');
-                computerCards.forEach(card => card.classList.remove('hidden'));
-            } else {
-                mechanicalColumn.classList.remove('hidden');
-                computerColumn.classList.remove('hidden');
-                allColumn.classList.remove('hidden');
-                mechanicalCards.forEach(card => card.classList.remove('hidden'));
-                computerCards.forEach(card => card.classList.remove('hidden'));
-            }
+            // Hide all columns initially
+            columns.forEach(column => column.classList.add('hidden'));
+
+            // Show/hide cards based on category
+            cards.forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
+                if (category === 'all' || cardCategory === category) {
+                    card.classList.remove('hidden');
+                    card.parentElement.parentElement.classList.remove('hidden'); // Show the parent column
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+
+            // Ensure columns with visible cards remain visible
+            columns.forEach(column => {
+                const visibleCards = column.querySelectorAll('.card:not(.hidden)');
+                if (visibleCards.length > 0) {
+                    column.classList.remove('hidden');
+                } else {
+                    column.classList.add('hidden');
+                }
+            });
         }
 
         // Default to showing all projects on page load
@@ -341,8 +348,6 @@
             filterProjects('all');
         };
     </script>
-</body>
-</html>
 </body>
 </html>
 
