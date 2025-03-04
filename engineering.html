@@ -66,6 +66,11 @@
             cursor: pointer;
         }
 
+        .contact-button button a {
+            color: white;
+            text-decoration: none;
+        }
+
         /* Filter buttons */
         .filter-buttons {
             text-align: center;
@@ -202,7 +207,7 @@
             </ul>
         </nav>
         <div class="contact-button">
-            <button><a href="contact.html" style="color: white; text-decoration: none;">Contact</a></button>
+            <button><a href="contact.html">Contact</a></button>
         </div>
     </header>
 
@@ -244,18 +249,6 @@
                         </div>
                     </a>
                 </div>
-                <!-- Card 4: Electric Scooter -->
-                <div class="card">
-                    <a href="scooter.html">
-                        <div class="imgBx">
-                            <img src="IMG_0966.jpg" alt="Electric Scooter Image">
-                            <div class="overlay">
-                                <h2>Electric Scooter</h2>
-                                <p>Designed, calculated, budgeted, programmed, manufactured, assembled, and documented a fully functional electric scooter with solar power compatibility.</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
             </div>
 
             <!-- Computer Science Projects -->
@@ -286,8 +279,20 @@
                 </div>
             </div>
 
-            <!-- Other Projects (shown in All) -->
+            <!-- Other Projects (including Electric Scooter for All) -->
             <div class="columns all">
+                <!-- Card 4: Electric Scooter -->
+                <div class="card mechanical">
+                    <a href="scooter.html">
+                        <div class="imgBx">
+                            <img src="IMG_0966.jpg" alt="Electric Scooter Image">
+                            <div class="overlay">
+                                <h2>Electric Scooter</h2>
+                                <p>Designed, calculated, budgeted, programmed, manufactured, assembled, and documented a fully functional electric scooter with solar power compatibility.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
                 <!-- Card 6: SOLIDWORKS Designs -->
                 <div class="card">
                     <a href="Materialsdesigns.html" target="_self">
@@ -309,19 +314,25 @@
             const mechanical = document.querySelector('.mechanical');
             const computer = document.querySelector('.computer');
             const all = document.querySelector('.all');
+            const mechanicalCards = document.querySelectorAll('.card.mechanical');
+            const computerCards = document.querySelectorAll('.card.computer');
 
             if (category === 'mechanical') {
                 mechanical.classList.remove('hidden');
                 computer.classList.add('hidden');
                 all.classList.add('hidden');
+                mechanicalCards.forEach(card => card.classList.remove('hidden'));
             } else if (category === 'computer') {
                 mechanical.classList.add('hidden');
                 computer.classList.remove('hidden');
                 all.classList.add('hidden');
+                computerCards.forEach(card => card.classList.remove('hidden'));
             } else {
                 mechanical.classList.remove('hidden');
                 computer.classList.remove('hidden');
                 all.classList.remove('hidden');
+                mechanicalCards.forEach(card => card.classList.remove('hidden'));
+                computerCards.forEach(card => card.classList.remove('hidden'));
             }
         }
 
