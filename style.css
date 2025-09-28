@@ -197,6 +197,14 @@ h67 {
     font-family: "Rubik";
     line-height: .15;
 }
+
+h68 {
+    color: black;
+    font-size: 40px;
+    font-family: "Rubik";
+    line-height: .15;
+}
+
 h69 {
     align-items: center; 
     color: black;
