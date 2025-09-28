@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 /* Importing Google Fonts */
+
+
+.rubik-<uniquifier> {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
 
 /* Global styles */
 body {
@@ -180,6 +190,14 @@ h6 {
     font-family: Arial;
     line-height: 1.5;
     align-items: center; 
+}
+
+h69 {
+    text-align: center;
+    color: black;
+    font-size: 40px;
+    font-family: "Rubik";
+    line-height: .15; 
 }
 
 h7 {
