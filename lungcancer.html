@@ -24,11 +24,19 @@
       <button><a href="https://ebilal01.github.io/Elias-Bilal-Portfolio/contact.html">Contact</a></button>
       </div>
   </header>
-    <center><article><h8>How to Use</h8></article>
+<style>
+    h68 {
+    color: black;
+    font-size: 20px;
+    font-family: "Rubik";
+    line-height: .15;
+} 
+</style>
+    <center><article><h68>How to Use</h68></article>
   <h7>Please select a smoking level, drinking level and sexuality from the drop down menus then type in the largest major city closest to you in the text input section with proper capitalization. Then click the "Run Python Code" button to have your data compared to real hospital patient data and your lung cancer probability calculated as either high, medium or low. 
   </h7></center>
   <form method="post" action="/submit">
-    <center><article>
+   <article>
     <h10>Smoking level: (1-8 with 8 representing a heavy smoker)</h10>
     <select name="smoking_level">
       <option value="1">1</option>
@@ -94,14 +102,14 @@
     <button type="submit">Run Python Code</button>
     </article>
   </form></center>
-  <center><div id="result">Waiting for result...</div></center> <!-- This is the result section -->
-  <center><article><h8>About the Data</h8></article>
+  <center><div id="result">Waiting for result...</div> <!-- This is the result section -->
+  <center><article><h68>About the Data</h68></article>
   <h7>The data used in the Lung Cancer Probability calcuation is from a website called <a href="https://www.kaggle.com/" target="_self">
     Kaggle</a>, an online Machine Learning and Data Science Platform under Google. The input data is compared to <a href="https://www.kaggle.com/datasets/thedevastator/cancer-patients-and-air-pollution-a-new-link" target="_self">
       actual Lung Cancer probability results</a> from 1000 patients. The user's Air Pollution Exposure Level is calculated from a <a href="https://www.kaggle.com/datasets/thedevastator/cancer-patients-and-air-pollution-a-new-link" target="_self">csv file containing airpollution levels</a> of 3796 cities from around the world. With that data the user is matched with patients who share the same Sex, Alcohol Use Level, Smoking Level, and Air Pollution Exposure Level; then the probabilty results of those patients were averaged and a result response is generated for the program user. 
   </h7></center>
 
-      <center><article><h8>Graphs</h8></article>
+      <center><article><h68>Graphs</h68></article>
   <h7>The graphs below show the correlation between either drinking, smoking, or air pollution levels and lung cancer probability. From the Kaggle data set used in the calculations, drinking level and smoking level had the most linear correlation with lung cancer risk meaning the more an individual smokes or drinks their lung cancer risk increases. Airquality had a looser correlation with lung cancer risk however the overall trend of the data showed it does play a factor in lung cancer probability. 
   </h7></center>
 
@@ -117,6 +125,7 @@
 
 </body>
 </html>
+
 
 
 
