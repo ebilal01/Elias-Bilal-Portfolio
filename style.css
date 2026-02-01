@@ -404,8 +404,8 @@ h68 {
 }
 
 /* ──────────────────────────────────────────────── */
-/* RESPONSIVE PROJECT CARDS – only this part changed */
-/* One column on phone, three on laptop              */
+/* RESPONSIVE PROJECT CARDS – added only this block */
+/* One column on phone, three on laptop             */
 /* ──────────────────────────────────────────────── */
 
 @media (max-width: 1024px) {
