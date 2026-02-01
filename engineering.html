@@ -15,60 +15,112 @@
     <title>Elias Bilal Portfolio</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-
+        /* Importing Google Fonts */
+        /* Global styles */
         body {
             font-size: 16px;
             line-height: 1.5;
             font-family: Arial, sans-serif;
         }
-
         @media (max-width: 480px) {
-            .overlay h2 { font-size: 14px; }
-            .overlay p { font-size: 10px; }
+            .overlay h2 {
+                font-size: 14px;
+            }
+            .overlay p {
+                font-size: 10px;
+            }
         }
-
         @media (max-width: 768px) {
-            .overlay h2 { font-size: 16px; }
-            .overlay p { font-size: 12px; }
-            .nav_links { flex-direction: column; }
-            .nav_links li { margin: 10px 0; }
-            .content { flex-direction: column; }
-            .image-container { width: 100%; margin-bottom: 20px; }
-            .text-content { width: 100%; padding: 0 10px; }
-            .text-content h5 { font-size: 28px; text-align: center; font-family: "Lobster Two", sans-serif; }
-            .text-content p { font-size: 16px; line-height: 1.5; text-align: justify; font-family: Arial, sans-serif; }
+            .overlay h2 {
+                font-size: 16px;
+            }
+            .overlay p {
+                font-size: 12px;
+            }
+            .nav_links {
+                flex-direction: column;
+            }
+            .nav_links li {
+                margin: 10px 0;
+            }
+            .content {
+                flex-direction: column;
+            }
+            .image-container {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .text-content {
+                width: 100%;
+                padding: 0 10px;
+            }
+            .text-content h5 {
+                font-size: 28px;
+                text-align: center;
+                font-family: "Lobster Two", sans-serif;
+            }
+            .text-content p {
+                font-size: 16px;
+                line-height: 1.5;
+                text-align: justify;
+                font-family: Arial, sans-serif;
+            }
         }
-
         @media (min-width: 769px) {
-            .content { flex-direction: row; align-items: flex-start; }
-            .image-container { flex: 0 0 400px; margin-right: 20px; }
-            .text-content { flex: 1; max-width: calc(100% - 420px); }
-            .text-content h5 { font-size: 40px; text-align: left; font-family: "Lobster Two", sans-serif; }
-            .text-content p { font-size: 20px; line-height: 1.5; text-align: justify; font-family: Arial, sans-serif; }
+            .content {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+            .image-container {
+                flex: 0 0 400px;
+                margin-right: 20px;
+            }
+            .text-content {
+                flex: 1;
+                max-width: calc(100% - 420px);
+            }
+            .text-content h5 {
+                font-size: 40px;
+                text-align: left;
+                font-family: "Lobster Two", sans-serif;
+            }
+            .text-content p {
+                font-size: 20px;
+                line-height: 1.5;
+                text-align: justify;
+                font-family: Arial, sans-serif;
+            }
         }
-
         img {
             max-width: 100%;
             height: auto;
         }
-
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        body {
+            font-size: 16px;
+            line-height: 1.5;
+        }
         button {
             font-family: "Lobster Two", sans-serif;
             font-weight: 400;
             font-size: 20px;
         }
-
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             font-family: "Lobster Two";
-            padding: 20px 10%;
+            padding: 30px 10%;
             color: white;
+            line-height: 0.8;
+            padding-top: 0%;
+            padding-bottom: 0%;
+            margin-bottom: 5%;
             background-color: rgb(117, 212, 227);
         }
-
         p {
             margin-left: 10%;
             margin-right: 10%;
@@ -78,108 +130,231 @@
             font-family: sans-serif;
             line-height: 1.5;
         }
-
-        h68 {
+        h1 {
+            color: black;
+            font-size: 30px;
+            font-family: Arial;
+            line-height: 1.5;
+            align-items: center;
+        }
+        h2 {
+            color: black;
+            font-size: 15px;
+            font-family: Arial;
+            line-height: 1.5;
+            align-items: center;
+        }
+        h3 {
+            color: black;
+            font-size: 50px;
+            font-family: "Lobster Two";
+            line-height: 1.5;
+            align-items: center;
+        }
+        h4 {
+            color: black;
+            font-size: 20px;
+            font-family: Arial;
+            line-height: 1.5;
+            align-items: center;
+        }
+        h5 {
+            text-align: center;
             color: black;
             font-size: 40px;
-            font-family: "Rubik";
+            font-family: "Lobster Two";
             line-height: .15;
-            padding: 10px;
-            text-align: center;
         }
-
-        .filter-buttons {
-            text-align: center;
-            margin: 20px 0;
+        h6 {
+            color: black;
+            font-size: 25px;
+            font-family: Arial;
+            line-height: 1.5;
+            align-items: center;
         }
-
-        .filter-buttons button {
-            margin: 0 10px 10px;
-            background-color: rgb(117, 212, 227);
-            border: none;
-            border-radius: 5px;
-            color: white;
-            font-family: Rubik, sans-serif;
+        h7 {
+            padding-left: 5%;
+            color: black;
+            font-size: 25px;
+            font-family: sans-serif;
+            line-height: 1.5;
+            align-items: center;
+        }
+        nav {
             font-size: 20px;
-            padding: 10px 20px;
+            font-family: Arial;
+            line-height: 1.5;
         }
-
-        .filter-buttons button:hover {
-            background-color: rgb(90, 180, 200);
+        .nav_links {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
         }
-
-        .hidden {
-            display: none;
+        .nav_links li {
+            margin: 0 10px;
         }
-
+        .nav_links li a {
+            color: black;
+            text-decoration: none;
+        }
+        .nav_links li a:hover {
+            text-decoration: underline;
+        }
+        h8 {
+            color: black;
+            font-size: 50px;
+            font-family: "Lobster Two";
+            line-height: 1.5;
+            text-align: center;
+        }
+        .flex-parent {
+            display: flex;
+        }
+        .jc-center {
+            justify-content: center;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(117, 212, 227);
+            padding: 20px 10%;
+            color: white;
+        }
+        .header-content {
+            flex: 1;
+            margin-right: 20px;
+        }
+        h3, h6 {
+            margin: 0;
+        }
+        .contact-button {
+            margin-left: 20px;
+        }
+        button {
+            font-family: "Lobster Two", sans-serif;
+            font-size: 16px;
+        }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            padding: 20px;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+        .text-content h5 {
+            font-size: 30px;
+            font-family: "Lobster Two", sans-serif;
+            text-align: center;
+        }
+        .text-content p {
+            font-size: 20px;
+            line-height: 1.5;
+            color: black;
+            font-family: sans-serif;
+        }
+        .flex-parent {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .image {
+            display: inline-flex;
+            margin: 1%;
+            padding: 1%;
+        }
+        .grid {
+            margin-left: 0%;
+            margin-right: 1%;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .column {
+            flex: 28%;
+            max-width: 29%;
+            padding: 2%;
+        }
+        .column img {
+            margin: 6%;
+            vertical-align: middle;
+            width: 100%;
+        }
+        .gridy {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-gap: 40px;
+            justify-content: center;
+        }
         .skidrow {
             display: flex;
+            justify-content: space-between;
             width: 100%;
-            gap: 24px;
-            padding: 0 16px;
-            box-sizing: border-box;
+            gap: 20px;
         }
-
         .columns {
+            flex: 1;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-
+        .image {
+            max-width: 100%;
+            height: auto;
+        }
         .card {
             position: relative;
             width: 100%;
-            max-width: 340px;
+            max-width: 300px;
+            height: 300px;
             overflow: hidden;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 24px;
-            background-color: white;
+            margin-bottom: 20px;
+            background-color: white; /* Ensure white background for title area */
         }
-
         .card:last-child {
             margin-bottom: 0;
         }
-
         .card:hover {
             transform: translateY(-10px);
         }
-
         .imgBx {
             position: relative;
             width: 100%;
-            height: 200px;
+            height: 250px;
             overflow: hidden;
             border-radius: 8px 8px 0 0;
         }
-
         .imgBx img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             display: block;
         }
-
         .imgBx:hover img {
             transform: scale(1.1);
         }
-
         .card-title {
-            height: 50px;
+            height: 50px; /* Remaining space below image */
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 0 10px;
             text-align: center;
         }
-
         .card-title h2 {
-            font-size: 16px;
+            font-size: 16px; /* Smaller to fit in 50px height */
             margin: 0;
             color: black;
             font-family: Arial, sans-serif;
         }
-
         .overlay {
             position: absolute;
             top: 0;
@@ -197,70 +372,79 @@
             opacity: 0;
             transition: opacity 0.3s ease;
         }
-
         .card:hover .overlay {
             opacity: 1;
         }
-
         .overlay p {
             font-size: 14px;
             margin: 0;
             text-align: center;
         }
-
         .center-image {
             display: block;
             margin: 0 auto;
             text-align: center;
         }
+        .filter-buttons {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .filter-buttons button {
+            margin: 0 10px;
+            background-color: rgb(117, 212, 227);
+            border: none;
+            border-radius: 5px;
+            color: white;
+            transition: background-color 0.3s;
+            font-family: Rubik, sans-serif;
+            font-weight: 400;
+            font-size: 20px;
+            padding: 10px 20px;
+        }
+        .filter-buttons button:hover {
+            background-color: rgb(90, 180, 200);
+        }
+        .hidden {
+            display: none;
+        }
+        h68 {
+    color: black;
+    font-size: 40px;
+    font-family: "Rubik";
+    line-height: .15;
+    padding: 10px;
+}
 
         /* ──────────────────────────────────────────────── */
-        /* FORCE SINGLE COLUMN ON PHONES (including wide viewport reports) */
+        /* ONLY CHANGE: responsive layout for the project cards */
         /* ──────────────────────────────────────────────── */
-        @media screen and (max-width: 2000px) {
+        @media (max-width: 1024px) {
             .skidrow {
-                flex-direction: column !important;
-                align-items: center !important;
-                justify-content: flex-start !important;
-                gap: 40px !important;
-                padding: 20px 16px !important;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
             }
-
             .columns {
-                width: 100% !important;
-                max-width: 480px !important;
-                flex: none !important;
-                padding: 0 !important;
+                width: 100%;
+                max-width: 420px;
             }
-
             .card {
-                width: 100% !important;
-                max-width: 480px !important;
-                margin: 0 auto 40px auto !important;
-            }
-
-            .columns.hidden {
-                display: none !important;
+                max-width: 420px;
+                margin: 0 auto 20px auto;
             }
         }
 
-        /* Only very large desktop screens get three columns */
-        @media screen and (min-width: 2001px) {
+        @media (min-width: 1025px) {
             .skidrow {
-                flex-direction: row !important;
-                flex-wrap: nowrap !important;
-                justify-content: space-between !important;
-                gap: 20px !important;
-                padding: 0 !important;
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 20px;
             }
-
             .columns {
-                flex: 1 !important;
-                max-width: 33.333% !important;
+                flex: 1;
             }
-
             .card {
-                max-width: 100% !important;
+                max-width: 300px;
             }
         }
     </style>
@@ -273,30 +457,26 @@
         </div>
         <nav>
             <ul class="nav_links">
-                <li><h67><a href="index.html">About Me</a></h67></li>
-                <li><h67><a href="engineering.html">Engineering</a></h67></li>
-                <li><h67><a href="art.html">Art</a></h67></li>
-            </ul>
+        <li><h67><a href="index.html">About Me</a></h67></li>
+        <li><h67><a href="engineering.html">Engineering</a></h67></li>
+        <li><h67><a href="art.html">Art</a></h67></li>
+    </ul>
         </nav>
         <div class="contact-button">
             <button><a type="submit" onclick="location.href='contact.html'">Contact</a></button>
         </div>
     </header>
-
-    <article>
+<article>
         <center><h68>Projects</h68></center>
     </article>
-
     <div class="filter-buttons">
         <button onclick="filterProjects('mechanical')">Mechanical Engineering</button>
         <button onclick="filterProjects('electrical')">Electrical Engineering</button>
         <button onclick="filterProjects('computer')">Computer Science</button>
         <button onclick="filterProjects('all')">All</button>
     </div>
-
     <article class="gridy">
         <div class="skidrow">
-
             <!-- Mechanical Engineering Projects -->
             <div class="columns mechanical">
                 <!-- Card 1: Line Follower -->
@@ -313,7 +493,7 @@
                         </div>
                     </a>
                 </div>
-
+                <div class="columns mechanical">
                 <!-- Card 2: Camera Line Follower -->
                 <div class="card" data-category="mechanical">
                     <a href="https://ebilal01.github.io/ME-35-Projects/camera.html">
@@ -328,8 +508,7 @@
                         </div>
                     </a>
                 </div>
-
-                <!-- Card: SOLIDWORKS Designs (moved here but kept "all") -->
+                    <!-- Card 6: SOLIDWORKS Designs -->
                 <div class="card" data-category="all">
                     <a href="Materialsdesigns.html" target="_self">
                         <div class="imgBx">
@@ -343,71 +522,7 @@
                         </div>
                     </a>
                 </div>
-
-                <!-- Card: Autonomous Pancake Maker -->
-                <div class="card" data-category="mechanical">
-                    <a href="pancake.html">
-                        <div class="imgBx">
-                            <img src="DSC_6701.JPG" alt="Pancake">
-                            <div class="overlay">
-                                <p>Created a pancake maker that creates unique pancakes based on user input order. </p>
-                            </div>
-                        </div>
-                        <div class="card-title">
-                            <h2>Autonomous Pancake Maker</h2>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Card: Object Recognition Robot -->
-                <div class="card" data-category="mechanical">
-                    <a href="https://ebilal01.github.io/ME-35-Projects/object.html">
-                        <div class="imgBx">
-                            <img src="Screenshot 2025-10-13 124408.png" alt="Object Recognition Robot">
-                            <div class="overlay">
-                                <p>Programmmed a robot that can recognize objects and make decisions based on the object identified.</p>
-                            </div>
-                        </div>
-                        <div class="card-title">
-                            <h2>Object Recognition Robot</h2>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Card: Electric Scooter -->
-                <div class="card" data-category="mechanical">
-                    <a href="https://docs.google.com/presentation/d/e/2PACX-1vSz-QCfErE0PKYjCT2dseidSWSvtJFVfc5J7kvRN7qURqEzHWHqqvAD9gtT9Nj5eDDk-Ek6myS_nMXS/pub?start=false&loop=false&delayms=3000">
-                        <div class="imgBx">
-                            <img src="Screenshot 2025-10-01 104913.png" alt="Electric Scooter Image">
-                            <div class="overlay">
-                                <p>Designed, calculated, budgeted, programmed, manufactured, assembled, and documented a fully functional electric scooter with solar power compatibility.</p>
-                            </div>
-                        </div>
-                        <div class="card-title">
-                            <h2>Electric Scooter</h2>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Card: Ball Sorter -->
-                <div class="card" data-category="mechanical">
-                    <a href="sorter.html">
-                        <div class="imgBx">
-                            <img src="Screenshot 2025-10-24 185031.png" alt="Sorter">
-                            <div class="overlay">
-                                <p>Created a robot that can autonomously sort colored balls.</p>
-                            </div>
-                        </div>
-                        <div class="card-title">
-                            <h2>Ball Sorter</h2>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Computer Science Projects -->
-            <div class="columns computer">
-                <!-- Card: Machine Learning Site -->
+                    <!-- Card 2: Machine Learning Site -->
                 <div class="card" data-category="computer">
                     <a href="https://elias-bilal-portfolio-2.onrender.com" target="_blank">
                         <div class="imgBx">
@@ -421,8 +536,12 @@
                         </div>
                     </a>
                 </div>
-
-                <!-- Card: Tufts Sonic Anemometer Mission Site -->
+              
+            </div>
+            </div>
+            <!-- Computer Science Projects -->
+            <div class="columns computer">
+                <!-- Card 7: Tufts Sonic Anemometer Mission Site -->
                 <div class="card" data-category="computer">
                     <a href="https://ultrasonic-anemometer.onrender.com/">
                         <div class="imgBx">
@@ -436,26 +555,22 @@
                         </div>
                     </a>
                 </div>
-
-                <!-- Card: American Sign Language App -->
-                <div class="card" data-category="computer">
-                    <a href="https://studio.code.org/projects/applab/uJlgKVO_HsTKCGYcEMvtqg7A-r1FKxl0xQVliN1B_cs">
+                <div class="columns mechanical">
+                <!-- Card 1: Line Follower -->
+                <div class="card" data-category="mechanical">
+                    <a href="pancake.html">
                         <div class="imgBx">
-                            <img src="Screenshot 2025-10-01 103514.png" alt="American Sign Language App Image">
+                            <img src="DSC_6701.JPG" alt="Pancake">
                             <div class="overlay">
-                                <p>Coded an app that can show you how to spell anything in ASL using JavaScript.</p>
+                                <p>Created a pancake maker that creates unique pancakes based on user input order. </p>
                             </div>
                         </div>
                         <div class="card-title">
-                            <h2>American Sign Language App</h2>
+                            <h2>Autonomous Pancake Maker</h2>
                         </div>
                     </a>
                 </div>
-            </div>
-
-            <!-- Electrical & Other Projects -->
-            <div class="columns all">
-                <!-- Card: LEGO Crossbow (electrical) -->
+                </div>
                 <div class="card" data-category="electrical">
                     <a href="crossbow.html" target="_self">
                         <div class="imgBx">
@@ -469,8 +584,40 @@
                         </div>
                     </a>
                 </div>
-
-                <!-- Card: SDR Data Acquisition System (electrical) -->
+               
+                <div class="card" data-category="mechanical">
+                    <a href="https://ebilal01.github.io/ME-35-Projects/object.html">
+                        <div class="imgBx">
+                            <img src="Screenshot 2025-10-13 124408.png" alt="Object Recognition Robot">
+                            <div class="overlay">
+                                <p>Programmmed a robot that can recognize objects and make decisions based on the object identified.</p>
+                            </div>
+                        </div>
+                        <div class="card-title">
+                            <h2>Object Recognition Robot</h2>
+                        </div>
+                    </a>
+                </div>
+               
+               
+            </div>
+            <!-- Other Projects -->
+            <div class="columns all">
+                <!-- Card 4: Electric Scooter -->
+                <div class="card" data-category="mechanical">
+                    <a href="https://docs.google.com/presentation/d/e/2PACX-1vSz-QCfErE0PKYjCT2dseidSWSvtJFVfc5J7kvRN7qURqEzHWHqqvAD9gtT9Nj5eDDk-Ek6myS_nMXS/pub?start=false&loop=false&delayms=3000">
+                        <div class="imgBx">
+                            <img src="Screenshot 2025-10-01 104913.png" alt="Electric Scooter Image">
+                            <div class="overlay">
+                                <p>Designed, calculated, budgeted, programmed, manufactured, assembled, and documented a fully functional electric scooter with solar power compatibility.</p>
+                            </div>
+                        </div>
+                        <div class="card-title">
+                            <h2>Electric Scooter</h2>
+                        </div>
+                    </a>
+                </div>
+                <!-- Card 6: SOLIDWORKS Designs -->
                 <div class="card" data-category="electrical">
                     <a href="https://docs.google.com/presentation/d/e/2PACX-1vRCcfVBfCJaBxZOxvUBNUbiy_4tnpQZZj-KJ_Rn2wh26_l6yMyWL6QM-9aP3zffVvkJ8RSfq_REbG6a/pub?start=false&loop=false&delayms=3000" target="_self">
                         <div class="imgBx">
@@ -484,11 +631,39 @@
                         </div>
                     </a>
                 </div>
+                 <!-- Card 5: ASL App -->
+                <div class="card" data-category="computer">
+                    <a href="https://studio.code.org/projects/applab/uJlgKVO_HsTKCGYcEMvtqg7A-r1FKxl0xQVliN1B_cs">
+                        <div class="imgBx">
+                            <img src="Screenshot 2025-10-01 103514.png" alt="American Sign Language App Image">
+                            <div class="overlay">
+                                <p>Coded an app that can show you how to spell anything in ASL using JavaScript.</p>
+                            </div>
+                        </div>
+                        <div class="card-title">
+                            <h2>American Sign Language App</h2>
+                        </div>
+                    </a>
+                </div>
+                
+                 <!-- Card 4: Ball Sorter -->
+                <div class="card" data-category="mechanical">
+                    <a href="sorter.html">
+                        <div class="imgBx">
+                            <img src="Screenshot 2025-10-24 185031.png" alt="Sorter">
+                            <div class="overlay">
+                                <p>Created a robot that can autonomously sort colored balls.</p>
+                            </div>
+                        </div>
+                        <div class="card-title">
+                            <h2>Ball Sorter</h2>
+                        </div>
+                    </a>
+                </div>
+               
             </div>
-
         </div>
     </article>
-
     <script>
         function filterProjects(category) {
             const cards = document.querySelectorAll('.card');
@@ -512,7 +687,6 @@
                 }
             });
         }
-
         window.onload = function() {
             filterProjects('all');
         };
