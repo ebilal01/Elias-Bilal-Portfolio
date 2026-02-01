@@ -1,29 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 /* Importing Google Fonts */
-
-
 .rubik-<uniquifier> {
   font-family: "Rubik", sans-serif;
   font-optical-sizing: auto;
   font-weight: <weight>;
   font-style: normal;
 }
-
 /* Global styles */
 body {
     font-size: 16px;
     line-height: 1.5;
     font-family: Arial, sans-serif; /* Default font stack */
 }
-
 /* Global styles */
 @media (max-width: 480px) {
     .overlay h2 {
         font-size: 14px;
     }
-
     .overlay p {
         font-size: 10px;
     }
@@ -34,7 +28,6 @@ body {
     .overlay h2 {
         font-size: 16px;
     }
-
     .overlay p {
         font-size: 12px;
     }
@@ -45,7 +38,6 @@ body {
     .nav_links li {
         margin: 10px 0; /* Adjust spacing between stacked navigation items */
     }
-
     /* Flexbox adjustments for content layout */
     .content {
         flex-direction: column; /* Stack items vertically on smaller screens */
@@ -70,7 +62,6 @@ body {
         font-family: Arial, sans-serif; /* Use default font stack */
     }
 }
-
 /* Styles for larger screens (e.g., laptops) */
 @media (min-width: 769px) {
     /* Flexbox adjustments for content layout */
@@ -98,28 +89,23 @@ body {
         font-family: Arial, sans-serif; /* Use default font stack */
     }
 }
-
 img {
     max-width: 100%;
     height: auto;
 }
-
 .container {
     display: flex;
     flex-wrap: wrap;
 }
-
 body {
     font-size: 16px;
     line-height: 1.5;
 }
-
-button { 
+button {
     font-family: "Lobster Two", sans-serif;
     font-weight: 400;
     font-size: 20px;
 }
-
 header {
     display: flex;
     justify-content: space-between;
@@ -133,7 +119,6 @@ header {
     margin-bottom: 5%;
     background-color: rgb(117, 212, 227);
 }
-
 p {
     margin-left: 10%;
     margin-right: 10%;
@@ -143,39 +128,34 @@ p {
     font-family: sans-serif;
     line-height: 1.5;
 }
-
 h1 {
     color: black;
     font-size: 30px;
     font-family: Arial;
     line-height: 1.5;
-    align-items: center; 
+    align-items: center;
 }
-
 h2 {
     color: black;
     font-size: 15px;
     font-family: Arial;
     line-height: 1.5;
-    align-items: center; 
+    align-items: center;
 }
-
 h3 {
     color: black;
     font-size: 50px;
     font-family: "Lobster Two";
     line-height: 1.5;
-    align-items: center; 
+    align-items: center;
 }
-
 h4 {
     color: black;
     font-size: 20px;
     font-family: Arial;
     line-height: 1.5;
-    align-items: center; 
+    align-items: center;
 }
-
 h5 {
     text-align: center;
     color: black;
@@ -183,13 +163,12 @@ h5 {
     font-family: "Rubik";
     line-height: .15;
 }
-
 h6 {
     color: black;
     font-size: 25px;
     font-family: Arial;
     line-height: 1.5;
-    align-items: center; 
+    align-items: center;
 }
 h67 {
     color: black;
@@ -197,37 +176,32 @@ h67 {
     font-family: "Rubik";
     line-height: .15;
 }
-
 h68 {
     color: black;
     font-size: 40px;
     font-family: "Rubik";
     line-height: .15;
 }
-
 h69 {
-    align-items: center; 
+    align-items: center;
     color: black;
     font-size: 40px;
     font-family: Rubik;
-    line-height: .15; 
+    line-height: .15;
 }
-
 h7 {
     padding-left: 5%;
     color: black;
     font-size: 25px;
     font-family: sans-serif;
     line-height: 1.5;
-    align-items: center; 
+    align-items: center;
 }
-
 nav {
     font-size: 20px;
     font-family: Arial;
     line-height: 1.5;
 }
-
 .nav_links {
     list-style-type: none;
     margin: 0;
@@ -235,36 +209,29 @@ nav {
     display: flex;
     justify-content: center; /* Center the navigation links horizontally */
 }
-
 .nav_links li {
     margin: 0 10px;
 }
-
 .nav_links li a {
     color: black;
     text-decoration: none;
 }
-
 .nav_links li a:hover {
     text-decoration: underline;
 }
-
 h8 {
     color: black;
     font-size: 50px;
     font-family: "Lobster Two";
     line-height: 1.5;
-    text-align: center; 
+    text-align: center;
 }
-
 .flex-parent {
     display: flex;
 }
-
 .jc-center {
     justify-content: center;
 }
-
 header {
     display: flex;
     justify-content: space-between;
@@ -273,25 +240,20 @@ header {
     padding: 20px 10%;
     color: white;
 }
-
 .header-content {
     flex: 1; /* Take up remaining space */
     margin-right: 20px; /* Adjust margin as needed */
 }
-
 h3, h6 {
     margin: 0; /* Remove default margin */
 }
-
 .contact-button {
     margin-left: 20px; /* Adjust margin as needed */
 }
-
 button {
     font-family: "Lobster Two", sans-serif;
     font-size: 16px; /* Adjust font size as needed */
 }
-
 /* Common styles for both screens */
 .content {
     display: flex;
@@ -299,88 +261,74 @@ button {
     align-items: flex-start; /* Align items to the top */
     padding: 20px; /* Adjust padding as needed */
 }
-
 .image-container img {
     max-width: 100%; /* Ensure image scales appropriately */
     height: auto; /* Maintain aspect ratio */
 }
-
 .text-content h5 {
     font-size: 30px; /* Adjust font size as needed */
     font-family: "Lobster Two", sans-serif;
     text-align: center;
 }
-
 .text-content p {
     font-size: 20px; /* Adjust font size as needed */
     line-height: 1.5;
     color: black;
     font-family: sans-serif;
 }
-
 .flex-parent {
     display: flex;
     justify-content: center;
     margin-top: 10px; /* Adjust margin as needed */
 }
-
 /* General photo layout */
 .image {
     display: inline-flex;
     margin: 1%;
     padding: 1%;
 }
-
 .grid {
     margin-left: 0%;
     margin-right: 1%;
 }
-
 /* Photo grid layout */
 .row {
     display: flex;
     flex-wrap: wrap;
 }
-
 /* Create four equal columns that sits next to each other */
 .column {
     flex: 28%;
     max-width: 29%;
     padding: 2%; /* Changes the space between images in a single row */
 }
-
 .column img {
     margin: 6%; /* Changes the space between images in a single column*/
     vertical-align: middle;
     width: 100%;
 }
-
 .gridy {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 40px;
     justify-content: center;
 }
-
 .skidrow {
     display: flex;
     justify-content: space-between;
     width: 100%;
     gap: 20px; /* Adjust this value for desired padding between columns */
 }
-
 .columns {
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 .image {
     max-width: 100%;
     height: auto;
 }
-
 .card {
     position: relative;
     width: 100%; /* Ensure cards fill their columns */
@@ -390,15 +338,12 @@ button {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px; /* Adjust as needed for spacing between top and bottom cards */
 }
-
 .card:last-child {
     margin-bottom: 0; /* Remove margin from last card in each column */
 }
-
 .card:hover {
     transform: translateY(-10px);
 }
-
 .imgBx {
     position: relative;
     width: 100%;
@@ -406,18 +351,15 @@ button {
     overflow: hidden;
     border-radius: 8px 8px 0 0; /* Rounded corners for the image container */
 }
-
 .imgBx img {
     width: 100%;
     height: 100%; /* Fill the container */
     object-fit: cover; /* Maintain aspect ratio while filling */
     display: block;
 }
-
 .imgBx:hover img {
     transform: scale(1.1);
 }
-
 .overlay {
     position: absolute;
     top: 0;
@@ -435,25 +377,50 @@ button {
     opacity: 0; /* Initially hidden */
     transition: opacity 0.3s ease;
 }
-
 .card:hover .overlay {
     opacity: 1; /* Show overlay on hover */
 }
-
 .overlay h2 {
     font-size: 18px;
     margin: 0;
     text-align: center;
 }
-
 .overlay p {
     font-size: 14px;
     margin-top: 10px;
     text-align: center;
 }
-
 .center-image {
     display: block;
     margin: 0 auto;
     text-align: center;
+}
+
+/* ──────────────────────────────────────────────── */
+/* Added rules – only these lines are new/changed   */
+/* ──────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+    .skidrow {
+        justify-content: center !important;
+        gap: 20px !important;
+    }
+    
+    .columns {
+        flex: 0 1 320px !important;
+        max-width: 340px !important;
+        min-width: 280px !important;
+        box-sizing: border-box;
+        padding: 0 10px !important;
+    }
+    
+    .columns.hidden {
+        display: none !important;
+    }
+    
+    .card {
+        width: 100% !important;
+        max-width: 320px !important;
+        margin: 0 auto 24px auto !important;
+    }
 }
