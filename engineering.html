@@ -7,7 +7,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-V8925RHBMP');
 </script>
     <meta charset="UTF-8">
@@ -16,9 +15,8 @@
     <title>Elias Bilal Portfolio</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&display=swap');
-        /* Importing Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
-        /* Global styles */
         body {
             font-size: 16px;
             line-height: 1.5;
@@ -26,75 +24,28 @@
         }
 
         @media (max-width: 480px) {
-            .overlay h2 {
-                font-size: 14px;
-            }
-            .overlay p {
-                font-size: 10px;
-            }
+            .overlay h2 { font-size: 14px; }
+            .overlay p { font-size: 10px; }
         }
 
         @media (max-width: 768px) {
-            .overlay h2 {
-                font-size: 16px;
-            }
-            .overlay p {
-                font-size: 12px;
-            }
-            .nav_links {
-                flex-direction: column;
-            }
-            .nav_links li {
-                margin: 10px 0;
-            }
-            .content {
-                flex-direction: column;
-            }
-            .image-container {
-                width: 100%;
-                margin-bottom: 20px;
-            }
-            .text-content {
-                width: 100%;
-                padding: 0 10px;
-            }
-            .text-content h5 {
-                font-size: 28px;
-                text-align: center;
-                font-family: "Lobster Two", sans-serif;
-            }
-            .text-content p {
-                font-size: 16px;
-                line-height: 1.5;
-                text-align: justify;
-                font-family: Arial, sans-serif;
-            }
+            .overlay h2 { font-size: 16px; }
+            .overlay p { font-size: 12px; }
+            .nav_links { flex-direction: column; }
+            .nav_links li { margin: 10px 0; }
+            .content { flex-direction: column; }
+            .image-container { width: 100%; margin-bottom: 20px; }
+            .text-content { width: 100%; padding: 0 10px; }
+            .text-content h5 { font-size: 28px; text-align: center; font-family: "Lobster Two", sans-serif; }
+            .text-content p { font-size: 16px; line-height: 1.5; text-align: justify; font-family: Arial, sans-serif; }
         }
 
         @media (min-width: 769px) {
-            .content {
-                flex-direction: row;
-                align-items: flex-start;
-            }
-            .image-container {
-                flex: 0 0 400px;
-                margin-right: 20px;
-            }
-            .text-content {
-                flex: 1;
-                max-width: calc(100% - 420px);
-            }
-            .text-content h5 {
-                font-size: 40px;
-                text-align: left;
-                font-family: "Lobster Two", sans-serif;
-            }
-            .text-content p {
-                font-size: 20px;
-                line-height: 1.5;
-                text-align: justify;
-                font-family: Arial, sans-serif;
-            }
+            .content { flex-direction: row; align-items: flex-start; }
+            .image-container { flex: 0 0 400px; margin-right: 20px; }
+            .text-content { flex: 1; max-width: calc(100% - 420px); }
+            .text-content h5 { font-size: 40px; text-align: left; font-family: "Lobster Two", sans-serif; }
+            .text-content p { font-size: 20px; line-height: 1.5; text-align: justify; font-family: Arial, sans-serif; }
         }
 
         img {
@@ -102,17 +53,7 @@
             height: auto;
         }
 
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        body {
-            font-size: 16px;
-            line-height: 1.5;
-        }
-
-        button { 
+        button {
             font-family: "Lobster Two", sans-serif;
             font-weight: 400;
             font-size: 20px;
@@ -123,12 +64,8 @@
             justify-content: space-between;
             align-items: center;
             font-family: "Lobster Two";
-            padding: 30px 10%;
+            padding: 20px 10%;
             color: white;
-            line-height: 0.8;
-            padding-top: 0%;
-            padding-bottom: 0%;
-            margin-bottom: 5%;
             background-color: rgb(117, 212, 227);
         }
 
@@ -142,228 +79,62 @@
             line-height: 1.5;
         }
 
-        h1 {
-            color: black;
-            font-size: 30px;
-            font-family: Arial;
-            line-height: 1.5;
-            align-items: center; 
-        }
-
-        h2 {
-            color: black;
-            font-size: 15px;
-            font-family: Arial;
-            line-height: 1.5;
-            align-items: center; 
-        }
-
-        h3 {
-            color: black;
-            font-size: 50px;
-            font-family: "Lobster Two";
-            line-height: 1.5;
-            align-items: center; 
-        }
-
-        h4 {
-            color: black;
-            font-size: 20px;
-            font-family: Arial;
-            line-height: 1.5;
-            align-items: center; 
-        }
-
-        h5 {
-            text-align: center;
+        h68 {
             color: black;
             font-size: 40px;
-            font-family: "Lobster Two";
+            font-family: "Rubik";
             line-height: .15;
-        }
-
-        h6 {
-            color: black;
-            font-size: 25px;
-            font-family: Arial;
-            line-height: 1.5;
-            align-items: center; 
-        }
-
-        h7 {
-            padding-left: 5%;
-            color: black;
-            font-size: 25px;
-            font-family: sans-serif;
-            line-height: 1.5;
-            align-items: center; 
-        }
-
-        nav {
-            font-size: 20px;
-            font-family: Arial;
-            line-height: 1.5;
-        }
-
-        .nav_links {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-        }
-
-        .nav_links li {
-            margin: 0 10px;
-        }
-
-        .nav_links li a {
-            color: black;
-            text-decoration: none;
-        }
-
-        .nav_links li a:hover {
-            text-decoration: underline;
-        }
-
-        h8 {
-            color: black;
-            font-size: 50px;
-            font-family: "Lobster Two";
-            line-height: 1.5;
-            text-align: center; 
-        }
-
-        .flex-parent {
-            display: flex;
-        }
-
-        .jc-center {
-            justify-content: center;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: rgb(117, 212, 227);
-            padding: 20px 10%;
-            color: white;
-        }
-
-        .header-content {
-            flex: 1;
-            margin-right: 20px;
-        }
-
-        h3, h6 {
-            margin: 0;
-        }
-
-        .contact-button {
-            margin-left: 20px;
-        }
-
-        button {
-            font-family: "Lobster Two", sans-serif;
-            font-size: 16px;
-        }
-
-        .content {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: flex-start;
-            padding: 20px;
-        }
-
-        .image-container img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .text-content h5 {
-            font-size: 30px;
-            font-family: "Lobster Two", sans-serif;
+            padding: 10px;
             text-align: center;
         }
 
-        .text-content p {
+        .filter-buttons {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .filter-buttons button {
+            margin: 0 10px 10px;
+            background-color: rgb(117, 212, 227);
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-family: Rubik, sans-serif;
             font-size: 20px;
-            line-height: 1.5;
-            color: black;
-            font-family: sans-serif;
+            padding: 10px 20px;
         }
 
-        .flex-parent {
-            display: flex;
-            justify-content: center;
-            margin-top: 10px;
+        .filter-buttons button:hover {
+            background-color: rgb(90, 180, 200);
         }
 
-        .image {
-            display: inline-flex;
-            margin: 1%;
-            padding: 1%;
-        }
-
-        .grid {
-            margin-left: 0%;
-            margin-right: 1%;
-        }
-
-        .row {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .column {
-            flex: 28%;
-            max-width: 29%;
-            padding: 2%;
-        }
-
-        .column img {
-            margin: 6%;
-            vertical-align: middle;
-            width: 100%;
-        }
-
-        .gridy {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            grid-gap: 40px;
-            justify-content: center;
+        .hidden {
+            display: none;
         }
 
         .skidrow {
             display: flex;
-            justify-content: space-between;
             width: 100%;
-            gap: 20px;
+            gap: 24px;
+            padding: 0 16px;
+            box-sizing: border-box;
         }
 
         .columns {
-            flex: 1;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-        .image {
-            max-width: 100%;
-            height: auto;
-        }
-
         .card {
             position: relative;
             width: 100%;
-            max-width: 300px;
-            height: 300px;
+            max-width: 340px;
             overflow: hidden;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            background-color: white; /* Ensure white background for title area */
+            margin-bottom: 24px;
+            background-color: white;
         }
 
         .card:last-child {
@@ -377,7 +148,7 @@
         .imgBx {
             position: relative;
             width: 100%;
-            height: 250px;
+            height: 200px;
             overflow: hidden;
             border-radius: 8px 8px 0 0;
         }
@@ -394,7 +165,7 @@
         }
 
         .card-title {
-            height: 50px; /* Remaining space below image */
+            height: 50px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -403,7 +174,7 @@
         }
 
         .card-title h2 {
-            font-size: 16px; /* Smaller to fit in 50px height */
+            font-size: 16px;
             margin: 0;
             color: black;
             font-family: Arial, sans-serif;
@@ -443,39 +214,55 @@
             text-align: center;
         }
 
-        .filter-buttons {
-            text-align: center;
-            margin: 20px 0;
+        /* ──────────────────────────────────────────────── */
+        /* FORCE SINGLE COLUMN ON PHONES (including wide viewport reports) */
+        /* ──────────────────────────────────────────────── */
+        @media screen and (max-width: 2000px) {
+            .skidrow {
+                flex-direction: column !important;
+                align-items: center !important;
+                justify-content: flex-start !important;
+                gap: 40px !important;
+                padding: 20px 16px !important;
+            }
+
+            .columns {
+                width: 100% !important;
+                max-width: 480px !important;
+                flex: none !important;
+                padding: 0 !important;
+            }
+
+            .card {
+                width: 100% !important;
+                max-width: 480px !important;
+                margin: 0 auto 40px auto !important;
+            }
+
+            .columns.hidden {
+                display: none !important;
+            }
         }
 
-        .filter-buttons button {
-            margin: 0 10px;
-            background-color: rgb(117, 212, 227);
-            border: none;
-            border-radius: 5px;
-            color: white;
-            transition: background-color 0.3s;
-            font-family: Rubik, sans-serif;
-            font-weight: 400;
-            font-size: 20px;
-            padding: 10px 20px;
-        }
+        /* Only very large desktop screens get three columns */
+        @media screen and (min-width: 2001px) {
+            .skidrow {
+                flex-direction: row !important;
+                flex-wrap: nowrap !important;
+                justify-content: space-between !important;
+                gap: 20px !important;
+                padding: 0 !important;
+            }
 
-        .filter-buttons button:hover {
-            background-color: rgb(90, 180, 200);
-        }
+            .columns {
+                flex: 1 !important;
+                max-width: 33.333% !important;
+            }
 
-        .hidden {
-            display: none;
+            .card {
+                max-width: 100% !important;
+            }
         }
-
-        h68 {
-    color: black;
-    font-size: 40px;
-    font-family: "Rubik";
-    line-height: .15;
-    padding: 10px;
-}
     </style>
 </head>
 <body>
@@ -486,18 +273,20 @@
         </div>
         <nav>
             <ul class="nav_links">
-        <li><h67><a href="index.html">About Me</a></h67></li>
-        <li><h67><a href="engineering.html">Engineering</a></h67></li>
-        <li><h67><a href="art.html">Art</a></h67></li>
-    </ul>
+                <li><h67><a href="index.html">About Me</a></h67></li>
+                <li><h67><a href="engineering.html">Engineering</a></h67></li>
+                <li><h67><a href="art.html">Art</a></h67></li>
+            </ul>
         </nav>
         <div class="contact-button">
             <button><a type="submit" onclick="location.href='contact.html'">Contact</a></button>
         </div>
     </header>
-<article>
+
+    <article>
         <center><h68>Projects</h68></center>
     </article>
+
     <div class="filter-buttons">
         <button onclick="filterProjects('mechanical')">Mechanical Engineering</button>
         <button onclick="filterProjects('electrical')">Electrical Engineering</button>
@@ -507,6 +296,7 @@
 
     <article class="gridy">
         <div class="skidrow">
+
             <!-- Mechanical Engineering Projects -->
             <div class="columns mechanical">
                 <!-- Card 1: Line Follower -->
@@ -524,7 +314,6 @@
                     </a>
                 </div>
 
-                <div class="columns mechanical">
                 <!-- Card 2: Camera Line Follower -->
                 <div class="card" data-category="mechanical">
                     <a href="https://ebilal01.github.io/ME-35-Projects/camera.html">
@@ -540,7 +329,7 @@
                     </a>
                 </div>
 
-                    <!-- Card 6: SOLIDWORKS Designs -->
+                <!-- Card: SOLIDWORKS Designs (moved here but kept "all") -->
                 <div class="card" data-category="all">
                     <a href="Materialsdesigns.html" target="_self">
                         <div class="imgBx">
@@ -555,44 +344,7 @@
                     </a>
                 </div>
 
-                    <!-- Card 2: Machine Learning Site -->
-                <div class="card" data-category="computer">
-                    <a href="https://elias-bilal-portfolio-2.onrender.com"  target="_blank">
-                        <div class="imgBx">
-                            <img src="Screenshot 2025-10-13 121154.png" alt="Machine Learning Pyscript Website Image">
-                            <div class="overlay">
-                                <p>Coded an algorithm that can determine someone's lung cancer risk and generate graphs using Python, Pandas, and Numpy. Then I made it website accessible and operational using JavaScript, HTML and Render.</p>
-                            </div>
-                        </div>
-                        <div class="card-title">
-                            <h2>Machine Learning Site</h2>
-                        </div>
-                    </a>
-                </div>
-
-               
-            </div>
-            </div>
-
-            <!-- Computer Science Projects -->
-            <div class="columns computer">
-                <!-- Card 7: Tufts Sonic Anemometer Mission Site -->
-                <div class="card" data-category="computer">
-                    <a href="https://ultrasonic-anemometer.onrender.com/">
-                        <div class="imgBx">
-                            <img src="Screenshot 2025-03-03 210312.png" alt="NASA Image">
-                            <div class="overlay">
-                                <p>Developed a PyScript Webhook site that parses hex encoded data and displays sensor readings live.</p>
-                            </div>
-                        </div>
-                        <div class="card-title">
-                            <h2>NASA Anemometer Mission Site</h2>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="columns mechanical">
-                <!-- Card 1: Line Follower -->
+                <!-- Card: Autonomous Pancake Maker -->
                 <div class="card" data-category="mechanical">
                     <a href="pancake.html">
                         <div class="imgBx">
@@ -606,26 +358,8 @@
                         </div>
                     </a>
                 </div>
-                </div>
 
-
-                <div class="card" data-category="electrical">
-                    <a href="crossbow.html" target="_self">
-                        <div class="imgBx">
-                            <iframe src="https://drive.google.com/file/d/1BeWy4XrgphobTPT-DT6B61GCQaoOG6O0/preview" width="300" height="250" allow="autoplay"></iframe>
-                            <div class="overlay">
-                                <p>Created a balloon popping crossbow using LEGO Spike Prime</p>
-                            </div>
-                        </div>
-                        <div class="card-title">
-                            <h2>LEGO Crossbow</h2>
-                        </div>
-                    </a>
-                </div>
-
-
-                
-
+                <!-- Card: Object Recognition Robot -->
                 <div class="card" data-category="mechanical">
                     <a href="https://ebilal01.github.io/ME-35-Projects/object.html">
                         <div class="imgBx">
@@ -640,14 +374,7 @@
                     </a>
                 </div>
 
-
-                
-                
-            </div>
-
-            <!-- Other Projects -->
-            <div class="columns all">
-                <!-- Card 4: Electric Scooter -->
+                <!-- Card: Electric Scooter -->
                 <div class="card" data-category="mechanical">
                     <a href="https://docs.google.com/presentation/d/e/2PACX-1vSz-QCfErE0PKYjCT2dseidSWSvtJFVfc5J7kvRN7qURqEzHWHqqvAD9gtT9Nj5eDDk-Ek6myS_nMXS/pub?start=false&loop=false&delayms=3000">
                         <div class="imgBx">
@@ -662,39 +389,7 @@
                     </a>
                 </div>
 
-                <!-- Card 6: SOLIDWORKS Designs -->
-                <div class="card" data-category="electrical">
-                    <a href="https://docs.google.com/presentation/d/e/2PACX-1vRCcfVBfCJaBxZOxvUBNUbiy_4tnpQZZj-KJ_Rn2wh26_l6yMyWL6QM-9aP3zffVvkJ8RSfq_REbG6a/pub?start=false&loop=false&delayms=3000" target="_self">
-                        <div class="imgBx">
-                            <img src="Screenshot 2025-10-10 184621.png" alt="SDR">
-                            <div class="overlay">
-                                <p>Designed, programmed and fabricated low cost long range high altitude sensor data transmission system. </p>
-                            </div>
-                        </div>
-                        <div class="card-title">
-                            <h2>SDR Data Aquisiton System</h2>
-                        </div>
-                    </a>
-                </div>
-
-                 <!-- Card 5: ASL App -->
-                <div class="card" data-category="computer">
-                    <a href="https://studio.code.org/projects/applab/uJlgKVO_HsTKCGYcEMvtqg7A-r1FKxl0xQVliN1B_cs">
-                        <div class="imgBx">
-                            <img src="Screenshot 2025-10-01 103514.png" alt="American Sign Language App Image">
-                            <div class="overlay">
-                                <p>Coded an app that can show you how to spell anything in ASL using JavaScript.</p>
-                            </div>
-                        </div>
-                        <div class="card-title">
-                            <h2>American Sign Language App</h2>
-                        </div>
-                    </a>
-                </div>
-
-                 
-
-                 <!-- Card 4: Ball Sorter -->
+                <!-- Card: Ball Sorter -->
                 <div class="card" data-category="mechanical">
                     <a href="sorter.html">
                         <div class="imgBx">
@@ -708,9 +403,89 @@
                         </div>
                     </a>
                 </div>
-
-                
             </div>
+
+            <!-- Computer Science Projects -->
+            <div class="columns computer">
+                <!-- Card: Machine Learning Site -->
+                <div class="card" data-category="computer">
+                    <a href="https://elias-bilal-portfolio-2.onrender.com" target="_blank">
+                        <div class="imgBx">
+                            <img src="Screenshot 2025-10-13 121154.png" alt="Machine Learning Pyscript Website Image">
+                            <div class="overlay">
+                                <p>Coded an algorithm that can determine someone's lung cancer risk and generate graphs using Python, Pandas, and Numpy. Then I made it website accessible and operational using JavaScript, HTML and Render.</p>
+                            </div>
+                        </div>
+                        <div class="card-title">
+                            <h2>Machine Learning Site</h2>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Card: Tufts Sonic Anemometer Mission Site -->
+                <div class="card" data-category="computer">
+                    <a href="https://ultrasonic-anemometer.onrender.com/">
+                        <div class="imgBx">
+                            <img src="Screenshot 2025-03-03 210312.png" alt="NASA Image">
+                            <div class="overlay">
+                                <p>Developed a PyScript Webhook site that parses hex encoded data and displays sensor readings live.</p>
+                            </div>
+                        </div>
+                        <div class="card-title">
+                            <h2>NASA Anemometer Mission Site</h2>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Card: American Sign Language App -->
+                <div class="card" data-category="computer">
+                    <a href="https://studio.code.org/projects/applab/uJlgKVO_HsTKCGYcEMvtqg7A-r1FKxl0xQVliN1B_cs">
+                        <div class="imgBx">
+                            <img src="Screenshot 2025-10-01 103514.png" alt="American Sign Language App Image">
+                            <div class="overlay">
+                                <p>Coded an app that can show you how to spell anything in ASL using JavaScript.</p>
+                            </div>
+                        </div>
+                        <div class="card-title">
+                            <h2>American Sign Language App</h2>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Electrical & Other Projects -->
+            <div class="columns all">
+                <!-- Card: LEGO Crossbow (electrical) -->
+                <div class="card" data-category="electrical">
+                    <a href="crossbow.html" target="_self">
+                        <div class="imgBx">
+                            <iframe src="https://drive.google.com/file/d/1BeWy4XrgphobTPT-DT6B61GCQaoOG6O0/preview" width="300" height="250" allow="autoplay"></iframe>
+                            <div class="overlay">
+                                <p>Created a balloon popping crossbow using LEGO Spike Prime</p>
+                            </div>
+                        </div>
+                        <div class="card-title">
+                            <h2>LEGO Crossbow</h2>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Card: SDR Data Acquisition System (electrical) -->
+                <div class="card" data-category="electrical">
+                    <a href="https://docs.google.com/presentation/d/e/2PACX-1vRCcfVBfCJaBxZOxvUBNUbiy_4tnpQZZj-KJ_Rn2wh26_l6yMyWL6QM-9aP3zffVvkJ8RSfq_REbG6a/pub?start=false&loop=false&delayms=3000" target="_self">
+                        <div class="imgBx">
+                            <img src="Screenshot 2025-10-10 184621.png" alt="SDR">
+                            <div class="overlay">
+                                <p>Designed, programmed and fabricated low cost long range high altitude sensor data transmission system. </p>
+                            </div>
+                        </div>
+                        <div class="card-title">
+                            <h2>SDR Data Aquisiton System</h2>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
         </div>
     </article>
 
@@ -718,9 +493,7 @@
         function filterProjects(category) {
             const cards = document.querySelectorAll('.card');
             const columns = document.querySelectorAll('.columns');
-
             columns.forEach(column => column.classList.add('hidden'));
-
             cards.forEach(card => {
                 const cardCategory = card.getAttribute('data-category');
                 if (category === 'all' || cardCategory === category) {
@@ -730,7 +503,6 @@
                     card.classList.add('hidden');
                 }
             });
-
             columns.forEach(column => {
                 const visibleCards = column.querySelectorAll('.card:not(.hidden)');
                 if (visibleCards.length > 0) {
