@@ -26,37 +26,45 @@ body {
 /* Phone: compact header + Contact button top-right  */
 /* ──────────────────────────────────────────────── */
 
-@media (max-width: 768px) {
+/* ──────────────────────────────────────────────── */
+/* Mobile-friendly NAV – keeps desktop perfect       */
+/* ──────────────────────────────────────────────── */
 
+@media (max-width: 768px) {
     header {
-        padding: 12px 4% 10px 4%;      /* slightly more breathing room vertically */
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        align-items: flex-start;       /* tops aligned */
+        padding: 15px 5%;
+        flex-wrap: wrap;
         gap: 12px;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .header-content {
-        flex: 0 0 auto;
-        margin-right: 20px;            /* space after the name stack */
+        flex: 1 1 auto;
+        min-width: 140px;
+        margin-right: 0;
+        text-align: left;
     }
 
-    nav {
-        flex: 1;
-        display: flex;
-        justify-content: flex-end;     /* pushes the whole nav (links + button) right */
-        align-items: center;           /* vertical center for links + button */
+    .header-content h3 {
+        font-size: 24px;
         margin: 0;
     }
 
+    .header-content h6 {
+        font-size: 14px;
+        margin: 2px 0 0 0;
+    }
+
+    nav {
+        width: 100%;
+        margin-top: 8px;
+    }
+
     .nav_links {
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: flex-end;
-        gap: 16px;                     /* space between the 3 links */
-        margin-right: 20px;            /* space between "Art" and Contact button */
-        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px 24px;
     }
 
     .nav_links li {
@@ -65,44 +73,79 @@ body {
 
     .nav_links h67,
     .nav_links a {
-        font-size: 14px;               /* readable size */
-        color: black;
+        font-size: 17px;
     }
 
     .contact-button {
-        flex: 0 0 auto;
-        margin: 0;                     /* no extra margin — sits tight after Art */
-        align-self: center;            /* vertically centered with the links */
+        margin: 0 0 0 12px;
     }
 
     .contact-button button {
-        /* NO changes to colors, background, border, etc. — keep your original button look */
-        font-size: 14px;
-        padding: 6px 14px;
-        white-space: nowrap;
+        font-size: 15px;
+        padding: 8px 16px;
     }
 }
 
-/* Tiny phones — make fonts/gaps smaller if needed */
 @media (max-width: 500px) {
+    header {
+        padding: 12px 4%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .header-content {
+        width: 100%;
+        margin-bottom: 6px;
+    }
+
     .header-content h3 {
-        font-size: 18px;
+        font-size: 22px;
     }
+
     .header-content h6 {
-        font-size: 11px;
+        font-size: 13px;
     }
+
+    nav {
+        width: 100%;
+        margin-top: 4px;
+    }
+
     .nav_links {
-        gap: 12px;
-        margin-right: 12px;
+        justify-content: space-evenly;
+        gap: 12px 20px;
     }
+
     .nav_links h67,
     .nav_links a {
-        font-size: 13px;
+        font-size: 15px;
     }
+
+    .contact-button {
+        width: 100%;
+        margin: 8px 0 4px 0;
+        text-align: center;
+    }
+
     .contact-button button {
-        font-size: 13px;
-        padding: 5px 12px;
+        width: 80%;
+        max-width: 220px;
+        font-size: 16px;
+        padding: 10px 24px;
     }
+}
+
+/* Small global improvements – safe for desktop too */
+header {
+    flex-wrap: wrap;          /* fallback – harmless on desktop */
+    gap: 12px;
+}
+
+.nav_links li a {
+    padding: 6px 10px;        /* better tap area on mobile, invisible change on desktop */
+    display: inline-block;
 }
 /* Make sure these exist or update them */
 header {
