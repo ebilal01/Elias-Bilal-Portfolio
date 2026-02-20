@@ -22,40 +22,47 @@ body {
 /* Phone: compact single-row header + contact top-right */
 /* ──────────────────────────────────────────────── */
 
+/* ──────────────────────────────────────────────── */
+/* Phone: compact header + Contact button top-right  */
+/* ──────────────────────────────────────────────── */
+
 @media (max-width: 768px) {
 
     header {
         padding: 10px 4% 8px 4%;       /* tight vertical padding */
-        flex-wrap: nowrap;             /* force single line as much as possible */
+        flex-wrap: nowrap;             /* try to stay single line */
         justify-content: space-between;
-        align-items: flex-start;       /* align tops so button sits at name level */
-        gap: 10px;
-        min-height: 48px;
+        align-items: flex-start;       /* align tops → button at name level */
+        gap: 12px;
+        min-height: 50px;
     }
 
     .header-content {
-        flex: 0 0 auto;                /* don't stretch */
-        margin-right: 16px;            /* breathing room before nav */
+        flex: 0 0 auto;
+        margin-right: 16px;            /* space before nav/links */
         line-height: 1.1;
+    }
+
+    .header-content h3,
+    .header-content h6 {
+        color: black;                  /* force black – matches original */
+        margin: 0;
     }
 
     .header-content h3 {
         font-size: 20px;
-        margin: 0 0 2px 0;
         white-space: nowrap;
     }
 
     .header-content h6 {
         font-size: 11px;
-        margin: 0;
         white-space: nowrap;
-        color: white;                  /* assuming you want it visible on blue bg */
     }
 
     nav {
-        flex: 1;                       /* takes remaining space */
+        flex: 1;
         display: flex;
-        justify-content: flex-end;     /* push links + button to right */
+        justify-content: flex-end;     /* push links + button right */
         align-items: flex-start;
         margin: 0;
     }
@@ -64,8 +71,8 @@ body {
         display: flex;
         flex-wrap: nowrap;
         justify-content: flex-end;
-        gap: 14px;                     /* space between links */
-        margin: 0 12px 0 0;            /* space before button */
+        gap: 14px;
+        margin: 0 16px 0 0;            /* space before the button */
         align-items: center;
     }
 
@@ -75,8 +82,8 @@ body {
 
     .nav_links h67,
     .nav_links a {
+        color: black;                  /* keep black */
         font-size: 13px;
-        color: white;                  /* better contrast on blue bg */
         text-decoration: none;
         white-space: nowrap;
     }
@@ -87,28 +94,28 @@ body {
 
     .contact-button {
         flex: 0 0 auto;
-        margin: 0;                     /* no extra margin */
-        align-self: flex-start;        /* keeps it at top */
+        margin: 0;                     /* no extra space around button */
+        align-self: flex-start;        /* keeps it pinned to top-right */
     }
 
     .contact-button button {
+        font-family: "Lobster Two", sans-serif;
         font-size: 13px;
         padding: 6px 14px;
-        background-color: white;
-        color: rgb(117, 212, 227);     /* inverted colors for visibility */
-        border: 1px solid white;
-        border-radius: 5px;
-        white-space: nowrap;
+        color: black;                  /* black text */
+        background-color: transparent; /* or keep your original bg if it had one */
+        border: none;                  /* remove border if unwanted */
         cursor: pointer;
+        white-space: nowrap;
     }
 
     .contact-button button:hover {
-        background-color: #f0f0f0;
+        text-decoration: underline;    /* subtle hover instead of bg change */
     }
 }
 
-/* Very small phones — squeeze a bit more */
-@media (max-width: 500px) {
+/* Very narrow phones – make it even more compact */
+@media (max-width: 420px) {
 
     header {
         padding: 8px 3% 6px 3%;
@@ -125,7 +132,7 @@ body {
 
     .nav_links {
         gap: 10px;
-        margin-right: 8px;
+        margin-right: 10px;
     }
 
     .nav_links h67,
