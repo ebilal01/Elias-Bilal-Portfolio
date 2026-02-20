@@ -29,41 +29,24 @@ body {
 @media (max-width: 768px) {
 
     header {
-        padding: 10px 4% 8px 4%;       /* tight vertical padding */
-        flex-wrap: nowrap;             /* try to stay single line */
+        padding: 12px 4% 10px 4%;      /* slightly more breathing room vertically */
+        display: flex;
+        flex-wrap: nowrap;
         justify-content: space-between;
-        align-items: flex-start;       /* align tops → button at name level */
+        align-items: flex-start;       /* tops aligned */
         gap: 12px;
-        min-height: 50px;
     }
 
     .header-content {
         flex: 0 0 auto;
-        margin-right: 16px;            /* space before nav/links */
-        line-height: 1.1;
-    }
-
-    .header-content h3,
-    .header-content h6 {
-        color: black;                  /* force black – matches original */
-        margin: 0;
-    }
-
-    .header-content h3 {
-        font-size: 20px;
-        white-space: nowrap;
-    }
-
-    .header-content h6 {
-        font-size: 11px;
-        white-space: nowrap;
+        margin-right: 20px;            /* space after the name stack */
     }
 
     nav {
         flex: 1;
         display: flex;
-        justify-content: flex-end;     /* push links + button right */
-        align-items: flex-start;
+        justify-content: flex-end;     /* pushes the whole nav (links + button) right */
+        align-items: center;           /* vertical center for links + button */
         margin: 0;
     }
 
@@ -71,8 +54,8 @@ body {
         display: flex;
         flex-wrap: nowrap;
         justify-content: flex-end;
-        gap: 14px;
-        margin: 0 16px 0 0;            /* space before the button */
+        gap: 16px;                     /* space between the 3 links */
+        margin-right: 20px;            /* space between "Art" and Contact button */
         align-items: center;
     }
 
@@ -82,67 +65,43 @@ body {
 
     .nav_links h67,
     .nav_links a {
-        color: black;                  /* keep black */
-        font-size: 13px;
-        text-decoration: none;
-        white-space: nowrap;
-    }
-
-    .nav_links a:hover {
-        text-decoration: underline;
+        font-size: 14px;               /* readable size */
+        color: black;
     }
 
     .contact-button {
         flex: 0 0 auto;
-        margin: 0;                     /* no extra space around button */
-        align-self: flex-start;        /* keeps it pinned to top-right */
+        margin: 0;                     /* no extra margin — sits tight after Art */
+        align-self: center;            /* vertically centered with the links */
     }
 
     .contact-button button {
-        font-family: "Lobster Two", sans-serif;
-        font-size: 13px;
+        /* NO changes to colors, background, border, etc. — keep your original button look */
+        font-size: 14px;
         padding: 6px 14px;
-        color: black;                  /* black text */
-        background-color: transparent; /* or keep your original bg if it had one */
-        border: none;                  /* remove border if unwanted */
-        cursor: pointer;
         white-space: nowrap;
-    }
-
-    .contact-button button:hover {
-        text-decoration: underline;    /* subtle hover instead of bg change */
     }
 }
 
-/* Very narrow phones – make it even more compact */
-@media (max-width: 420px) {
-
-    header {
-        padding: 8px 3% 6px 3%;
-        gap: 8px;
-    }
-
+/* Tiny phones — make fonts/gaps smaller if needed */
+@media (max-width: 500px) {
     .header-content h3 {
         font-size: 18px;
     }
-
     .header-content h6 {
-        font-size: 10px;
+        font-size: 11px;
     }
-
     .nav_links {
-        gap: 10px;
-        margin-right: 10px;
+        gap: 12px;
+        margin-right: 12px;
     }
-
     .nav_links h67,
     .nav_links a {
-        font-size: 12px;
+        font-size: 13px;
     }
-
     .contact-button button {
-        font-size: 12px;
-        padding: 5px 10px;
+        font-size: 13px;
+        padding: 5px 12px;
     }
 }
 /* Make sure these exist or update them */
