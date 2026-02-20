@@ -18,45 +18,55 @@ body {
 /* Phone: keep header thin, everything in one row   */
 /* ──────────────────────────────────────────────── */
 
+/* ──────────────────────────────────────────────── */
+/* Phone: compact single-row header + contact top-right */
+/* ──────────────────────────────────────────────── */
+
 @media (max-width: 768px) {
 
     header {
-        padding: 10px 4% 10px 4%;      /* very compact vertical padding */
-        flex-wrap: nowrap;             /* prevent wrapping to new lines */
+        padding: 10px 4% 8px 4%;       /* tight vertical padding */
+        flex-wrap: nowrap;             /* force single line as much as possible */
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;       /* align tops so button sits at name level */
         gap: 10px;
-        min-height: 50px;              /* prevent it from getting too squished */
+        min-height: 48px;
     }
 
     .header-content {
-        flex: 0 0 auto;                /* don't let it grow too much */
-        margin-right: 12px;
-        min-width: 110px;
+        flex: 0 0 auto;                /* don't stretch */
+        margin-right: 16px;            /* breathing room before nav */
+        line-height: 1.1;
     }
 
     .header-content h3 {
-        font-size: 20px;               /* smaller brand name */
-        line-height: 1.1;
-        margin: 0;
-    }
-
-    .header-content h6 {
-        font-size: 11px;               /* subtitle even smaller */
-        margin: 0;
+        font-size: 20px;
+        margin: 0 0 2px 0;
         white-space: nowrap;
     }
 
+    .header-content h6 {
+        font-size: 11px;
+        margin: 0;
+        white-space: nowrap;
+        color: white;                  /* assuming you want it visible on blue bg */
+    }
+
     nav {
-        flex: 1;                       /* let nav take available space */
+        flex: 1;                       /* takes remaining space */
+        display: flex;
+        justify-content: flex-end;     /* push links + button to right */
+        align-items: flex-start;
         margin: 0;
     }
 
     .nav_links {
-        flex-wrap: nowrap;             /* force single line */
-        justify-content: flex-end;     /* push to right side */
-        gap: 14px;                     /* tight but tappable spacing */
-        margin: 0;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        gap: 14px;                     /* space between links */
+        margin: 0 12px 0 0;            /* space before button */
+        align-items: center;
     }
 
     .nav_links li {
@@ -65,29 +75,43 @@ body {
 
     .nav_links h67,
     .nav_links a {
-        font-size: 13px;               /* readable but compact */
+        font-size: 13px;
+        color: white;                  /* better contrast on blue bg */
+        text-decoration: none;
         white-space: nowrap;
+    }
+
+    .nav_links a:hover {
+        text-decoration: underline;
     }
 
     .contact-button {
         flex: 0 0 auto;
-        margin-left: 8px;
-        margin-right: 0;
+        margin: 0;                     /* no extra margin */
+        align-self: flex-start;        /* keeps it at top */
     }
 
     .contact-button button {
         font-size: 13px;
-        padding: 6px 12px;
-        min-width: 80px;
+        padding: 6px 14px;
+        background-color: white;
+        color: rgb(117, 212, 227);     /* inverted colors for visibility */
+        border: 1px solid white;
+        border-radius: 5px;
         white-space: nowrap;
+        cursor: pointer;
+    }
+
+    .contact-button button:hover {
+        background-color: #f0f0f0;
     }
 }
 
-/* Extra small phones (≤ 400px wide) — even tighter */
+/* Very small phones — squeeze a bit more */
 @media (max-width: 500px) {
 
     header {
-        padding: 8px 3%;
+        padding: 8px 3% 6px 3%;
         gap: 8px;
     }
 
@@ -101,6 +125,7 @@ body {
 
     .nav_links {
         gap: 10px;
+        margin-right: 8px;
     }
 
     .nav_links h67,
@@ -111,7 +136,6 @@ body {
     .contact-button button {
         font-size: 12px;
         padding: 5px 10px;
-        min-width: 70px;
     }
 }
 /* Make sure these exist or update them */
