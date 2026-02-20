@@ -84,7 +84,7 @@ body {
 }
 
 /* Extra small phones (≤ 400px wide) — even tighter */
-@media (max-width: 400px) {
+@media (max-width: 500px) {
 
     header {
         padding: 8px 3%;
