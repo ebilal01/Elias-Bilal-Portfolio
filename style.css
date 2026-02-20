@@ -14,121 +14,106 @@ body {
         font-size: 10px;
     }
 }
+/* ──────────────────────────────────────────────── */
+/* Phone: keep header thin, everything in one row   */
+/* ──────────────────────────────────────────────── */
+
 @media (max-width: 768px) {
+
     header {
-        padding: 15px 5%;           /* much less side padding on mobile */
-        flex-wrap: wrap;            /* allow wrapping if needed */
-        gap: 12px;
+        padding: 10px 4% 10px 4%;      /* very compact vertical padding */
+        flex-wrap: nowrap;             /* prevent wrapping to new lines */
         justify-content: space-between;
         align-items: center;
+        gap: 10px;
+        min-height: 50px;              /* prevent it from getting too squished */
     }
 
     .header-content {
-        flex: 1 1 auto;
-        min-width: 140px;
-        margin-right: 0;
-        text-align: left;
+        flex: 0 0 auto;                /* don't let it grow too much */
+        margin-right: 12px;
+        min-width: 110px;
     }
 
     .header-content h3 {
-        font-size: 24px;            /* smaller brand name */
+        font-size: 20px;               /* smaller brand name */
+        line-height: 1.1;
         margin: 0;
     }
 
     .header-content h6 {
-        font-size: 14px;
-        margin: 2px 0 0 0;
+        font-size: 11px;               /* subtitle even smaller */
+        margin: 0;
+        white-space: nowrap;
     }
 
     nav {
-        order: 3;                   /* push nav below on very small screens if wrapping occurs */
-        width: 100%;
-        margin-top: 8px;
+        flex: 1;                       /* let nav take available space */
+        margin: 0;
     }
 
     .nav_links {
-        flex-direction: row;        /* keep horizontal if space, but allow wrap */
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 16px 24px;             /* better spacing */
+        flex-wrap: nowrap;             /* force single line */
+        justify-content: flex-end;     /* push to right side */
+        gap: 14px;                     /* tight but tappable spacing */
+        margin: 0;
     }
 
     .nav_links li {
         margin: 0;
     }
 
-    .nav_links li a,
-    .nav_links h67 {
-        font-size: 17px;            /* readable but not huge */
+    .nav_links h67,
+    .nav_links a {
+        font-size: 13px;               /* readable but compact */
+        white-space: nowrap;
     }
 
     .contact-button {
-        order: 2;
-        margin-left: 12px;
+        flex: 0 0 auto;
+        margin-left: 8px;
         margin-right: 0;
     }
 
     .contact-button button {
-        font-size: 15px;
-        padding: 8px 16px;
-        min-width: 100px;
+        font-size: 13px;
+        padding: 6px 12px;
+        min-width: 80px;
+        white-space: nowrap;
     }
-
-    /* Bonus: hide h67 tags visually but keep semantics if you want cleaner look */
-    /* .nav_links h67 { display: none; } */   /* ← uncomment only if you want just link text */
 }
 
-@media (max-width: 500px) {
-    header {
-        padding: 12px 4%;
-        flex-direction: column;     /* stack everything vertically */
-        align-items: flex-start;
-        gap: 10px;
-    }
+/* Extra small phones (≤ 400px wide) — even tighter */
+@media (max-width: 400px) {
 
-    .header-content {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 6px;
+    header {
+        padding: 8px 3%;
+        gap: 8px;
     }
 
     .header-content h3 {
-        font-size: 22px;
+        font-size: 18px;
     }
 
     .header-content h6 {
-        font-size: 13px;
-    }
-
-    nav {
-        width: 100%;
-        margin-top: 4px;
+        font-size: 10px;
     }
 
     .nav_links {
-        justify-content: space-evenly;
-        gap: 12px;
+        gap: 10px;
     }
 
-    .nav_links li a,
-    .nav_links h67 {
-        font-size: 15px;           /* comfortable touch target size */
-    }
-
-    .contact-button {
-        width: 100%;
-        margin: 8px 0 4px 0;
-        text-align: center;
+    .nav_links h67,
+    .nav_links a {
+        font-size: 12px;
     }
 
     .contact-button button {
-        width: 80%;
-        max-width: 220px;
-        font-size: 16px;
-        padding: 10px;
+        font-size: 12px;
+        padding: 5px 10px;
+        min-width: 70px;
     }
 }
-
 /* Make sure these exist or update them */
 header {
     flex-wrap: wrap;                /* important for mobile */
