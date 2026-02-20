@@ -15,40 +15,140 @@ body {
     }
 }
 @media (max-width: 768px) {
-    .overlay h2 {
-        font-size: 16px;
+    header {
+        padding: 15px 5%;           /* much less side padding on mobile */
+        flex-wrap: wrap;            /* allow wrapping if needed */
+        gap: 12px;
+        justify-content: space-between;
+        align-items: center;
     }
-    .overlay p {
-        font-size: 12px;
+
+    .header-content {
+        flex: 1 1 auto;
+        min-width: 140px;
+        margin-right: 0;
+        text-align: left;
     }
+
+    .header-content h3 {
+        font-size: 24px;            /* smaller brand name */
+        margin: 0;
+    }
+
+    .header-content h6 {
+        font-size: 14px;
+        margin: 2px 0 0 0;
+    }
+
+    nav {
+        order: 3;                   /* push nav below on very small screens if wrapping occurs */
+        width: 100%;
+        margin-top: 8px;
+    }
+
     .nav_links {
-        flex-direction: column;
+        flex-direction: row;        /* keep horizontal if space, but allow wrap */
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px 24px;             /* better spacing */
     }
+
     .nav_links li {
-        margin: 10px 0;
+        margin: 0;
     }
-    .content {
-        flex-direction: column;
+
+    .nav_links li a,
+    .nav_links h67 {
+        font-size: 17px;            /* readable but not huge */
     }
-    .image-container {
+
+    .contact-button {
+        order: 2;
+        margin-left: 12px;
+        margin-right: 0;
+    }
+
+    .contact-button button {
+        font-size: 15px;
+        padding: 8px 16px;
+        min-width: 100px;
+    }
+
+    /* Bonus: hide h67 tags visually but keep semantics if you want cleaner look */
+    /* .nav_links h67 { display: none; } */   /* ← uncomment only if you want just link text */
+}
+
+@media (max-width: 500px) {
+    header {
+        padding: 12px 4%;
+        flex-direction: column;     /* stack everything vertically */
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .header-content {
         width: 100%;
-        margin-bottom: 20px;
-    }
-    .text-content {
-        width: 100%;
-        padding: 0 10px;
-    }
-    .text-content h5 {
-        font-size: 28px;
         text-align: center;
-        font-family: "Lobster Two", sans-serif;
+        margin-bottom: 6px;
     }
-    .text-content p {
+
+    .header-content h3 {
+        font-size: 22px;
+    }
+
+    .header-content h6 {
+        font-size: 13px;
+    }
+
+    nav {
+        width: 100%;
+        margin-top: 4px;
+    }
+
+    .nav_links {
+        justify-content: space-evenly;
+        gap: 12px;
+    }
+
+    .nav_links li a,
+    .nav_links h67 {
+        font-size: 15px;           /* comfortable touch target size */
+    }
+
+    .contact-button {
+        width: 100%;
+        margin: 8px 0 4px 0;
+        text-align: center;
+    }
+
+    .contact-button button {
+        width: 80%;
+        max-width: 220px;
         font-size: 16px;
-        line-height: 1.5;
-        text-align: justify;
-        font-family: Arial, sans-serif;
+        padding: 10px;
     }
+}
+
+/* Make sure these exist or update them */
+header {
+    flex-wrap: wrap;                /* important for mobile */
+    gap: 12px;                      /* fallback spacing */
+}
+
+.nav_links {
+    gap: 20px;                      /* better than margin on li (add this outside media queries) */
+}
+
+.nav_links li a {
+    padding: 6px 10px;              /* bigger touch target without increasing font */
+    display: inline-block;
+}
+
+/* Optional: nicer mobile underline */
+.nav_links li a:hover,
+.nav_links li a:focus {
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 @media (min-width: 769px) {
     .content {
