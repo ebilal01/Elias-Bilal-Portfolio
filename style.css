@@ -44,17 +44,13 @@ body {
             margin-top: 8px;
         }
         .nav_links {
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 16px 24px;
-        }
-        .nav_links li {
-            margin: 0;
-        }
-        .nav_links h67,
-        .nav_links a {
-            font-size: 17px;
-        }
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px 24px;
+}
+.nav_links li {
+    margin: 0 !important;
         .contact-button {
             margin: 0 0 0 12px;
         }
@@ -86,13 +82,13 @@ body {
             margin-top: 4px;
         }
         .nav_links {
-            justify-content: space-evenly;
-            gap: 12px 20px;
-        }
-        .nav_links h67,
-        .nav_links a {
-            font-size: 15px;
-        }
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px 24px;
+}
+.nav_links li {
+    margin: 0 !important;
         .contact-button {
             width: 100%;
             margin: 8px 0 4px 0;
