@@ -58,12 +58,17 @@ body {
             font-size: 17px;
         }
         .contact-button {
-            margin: 0 0 0 12px;
-        }
-        .contact-button button {
-            font-size: 15px;
-            padding: 8px 16px;
-        }
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.contact-button button {
+    font-size: 15px;
+    padding: 8px 16px;
+    width: auto;
+}
     }
 
 @media (max-width: 500px) {
