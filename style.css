@@ -42,7 +42,6 @@ body {
             margin-top: 8px;
         }
 
-        /* ✅ ONLY CHANGE APPLIED HERE */
         .nav_links {
             flex-direction: row !important;
             flex-wrap: wrap;
@@ -57,24 +56,25 @@ body {
         .nav_links a {
             font-size: 17px;
         }
-        .contact-button {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin: 10px 0;
-}
 
-.contact-button button {
-    font-size: 15px;
-    padding: 8px 16px;
-    width: auto;
-}
+        .contact-button {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+        }
+
+        .contact-button button {
+            font-size: 15px;
+            padding: 8px 16px;
+            width: auto;
+        }
     }
 
 @media (max-width: 500px) {
         header {
             padding: 12px 4%;
-            flex-direction: row;
+            flex-direction: column;
             align-items: center;
             text-align: center;
             gap: 10px;
@@ -82,6 +82,7 @@ body {
         .header-content {
             width: 100%;
             margin-bottom: 6px;
+            text-align: center;
         }
         .header-content h3 {
             font-size: 22px;
@@ -94,27 +95,26 @@ body {
             margin-top: 4px;
         }
         .nav_links {
-    flex-direction: row !important;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 12px 20px;
-}
+            flex-direction: row !important;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px 20px;
+        }
         .nav_links h67,
         .nav_links a {
             font-size: 15px;
         }
-     .contact-button {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin: 10px 0;
-}
-
-.contact-button button {
-    font-size: 15px;
-    padding: 8px 16px;
-    width: auto;
-}
+        .contact-button {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+        }
+        .contact-button button {
+            font-size: 15px;
+            padding: 8px 16px;
+            width: auto;
+        }
     }
 
 /* Small global improvements – safe for desktop too */
@@ -137,8 +137,8 @@ header {
         margin-right: 20px;
     }
     .text-content {
-        flex: 1;
         max-width: calc(100% - 420px);
+        flex: 1;
     }
     .text-content h5 {
         font-size: 40px;
@@ -315,7 +315,6 @@ header {
 h3, h6 {
     margin: 0;
 }
-
 
 button {
     font-family: "Lobster Two", sans-serif;
@@ -563,13 +562,5 @@ h68 {
     }
     .card {
         max-width: 300px;
-    }
-}
-
-@media (max-width: 500px) {
-    .contact-button {
-        display: flex;
-        justify-content: center;
-        width: 100%;
     }
 }
