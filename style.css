@@ -16,6 +16,7 @@ body {
 }
 
 
+
 @media (max-width: 768px) {
         header {
             padding: 15px 5%;
@@ -235,14 +236,13 @@ nav {
     line-height: 1.5;
 }
 .nav_links {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+    flex-direction: row !important;
+    flex-wrap: wrap;
     justify-content: center;
+    gap: 16px 24px;
 }
 .nav_links li {
-    margin: 0 10px;
+    margin: 0 !important;
 }
 .nav_links li a {
     color: black;
