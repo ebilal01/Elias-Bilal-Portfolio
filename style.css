@@ -99,16 +99,14 @@ body {
             font-size: 15px;
         }
         .contact-button {
-            width: 100%;
-            margin: 8px 0 4px 0;
-            text-align: center;
-        }
-        .contact-button button {
-            width: 80%;
-            max-width: 220px;
-            font-size: 16px;
-            padding: 10px 24px;
-        }
+    margin: 0 0 0 12px;
+    width: auto;
+}
+.contact-button button {
+    width: auto;
+    font-size: 15px;
+    padding: 8px 16px;
+}
     }
 
 /* Small global improvements – safe for desktop too */
