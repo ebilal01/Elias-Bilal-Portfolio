@@ -316,9 +316,6 @@ h3, h6 {
     margin: 0;
 }
 
-.contact-button {
-    margin-left: 20px;
-}
 
 button {
     font-family: "Lobster Two", sans-serif;
@@ -571,7 +568,6 @@ h68 {
 
 @media (max-width: 500px) {
     .contact-button {
-        margin-left: 0 !important;
         display: flex;
         justify-content: center;
         width: 100%;
